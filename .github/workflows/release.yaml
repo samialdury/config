@@ -35,6 +35,11 @@ jobs:
               run: |
                   pnpm install --frozen-lockfile
 
+            - name: Build TypeScript
+              timeout-minutes: 2
+              run: |
+                  pnpm build
+
             - name: Create GitHub release and publish to NPM
               uses: changesets/action@v1
               timeout-minutes: 2

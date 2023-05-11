@@ -39,6 +39,11 @@ jobs:
               run: |
                   pnpm install --frozen-lockfile
 
+            - name: Build TypeScript
+              timeout-minutes: 2
+              run: |
+                  pnpm build
+
             - name: Changesets pull request
               uses: changesets/action@v1
               timeout-minutes: 2
