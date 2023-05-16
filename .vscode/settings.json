@@ -2,8 +2,8 @@
     "search.exclude": {
         "**/.git": true,
         "**/.DS_Store": true,
-        "**/node_modules": true,
         "**/.cache": true,
+        "**/node_modules": true,
         "**/build": true,
         "**/dist": true,
         "**/coverage": true,
