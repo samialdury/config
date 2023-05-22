@@ -55,13 +55,8 @@ export const config: Linter.Config = {
         'func-style': ['error', 'declaration'],
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/promise-function-async': 'error',
-        '@typescript-eslint/consistent-type-imports': [
-            'warn',
-            {
-                prefer: 'type-imports',
-                fixStyle: 'inline-type-imports',
-            },
-        ],
+        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/no-import-type-side-effects': 'error',
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },
