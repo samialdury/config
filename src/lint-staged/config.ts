@@ -1,7 +1,7 @@
 import { relative } from 'node:path'
 
 import { ESLint } from 'eslint'
-import { type Config } from 'lint-staged'
+import type { Config } from 'lint-staged'
 
 function toRelative(file: string): string {
     return relative(process.cwd(), file)
