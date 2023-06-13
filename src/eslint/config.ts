@@ -33,8 +33,10 @@ export const config: Linter.Config = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/strict',
-        // Prettier
-        'plugin:prettier/recommended',
+        // Other
+        'plugin:unicorn/recommended',
+        // Prettier should be always last
+        'prettier',
     ],
     settings: {
         'import/resolver': {
@@ -60,6 +62,12 @@ export const config: Linter.Config = {
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },
+        ],
+        'unicorn/filename-case': [
+            'error',
+            {
+                case: 'kebabCase',
+            },
         ],
     },
 }

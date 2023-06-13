@@ -12,19 +12,20 @@ async function removeIgnoredFiles(files: string[]): Promise<string[]> {
     const isIgnored = await Promise.all(
         files.map(async (file) => eslint.isPathIgnored(file))
     )
-    const filteredFiles = files.filter((_, i) => !isIgnored[i])
+    const filteredFiles = files.filter((_, index) => !isIgnored[index])
     return filteredFiles
 }
 
 export const config: Config = {
     '*': (files) => {
-        const filesToFormat = files.map(toRelative).join(' ')
+        const filesToFormat = files.map((file) => toRelative(file)).join(' ')
 
         return [`prettier --check ${filesToFormat}`]
     },
     '**/*.ts': async (files) => {
-        const filesToLint = (await removeIgnoredFiles(files))
-            .map(toRelative)
+        const nonIgnoredFiles = await removeIgnoredFiles(files)
+        const filesToLint = nonIgnoredFiles
+            .map((file) => toRelative(file))
             .join(' ')
 
         return [`eslint --max-warnings=0 ${filesToLint}`]
