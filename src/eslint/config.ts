@@ -69,5 +69,19 @@ export const config: Linter.Config = {
                 case: 'kebabCase',
             },
         ],
+        'unicorn/catch-error-name': [
+            'error',
+            {
+                name: 'err',
+            },
+        ],
+        'unicorn/prevent-abbreviations': [
+            'error',
+            {
+                replacements: {
+                    err: false,
+                },
+            },
+        ],
     },
 }
