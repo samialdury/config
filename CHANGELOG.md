@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 1.2.0
+
+### Minor Changes
+
+-   4c4236d: Add more permitted values to ESLint `unicorn/prevent-abbreviations`
+
 ## 1.1.1
 
 ### Patch Changes
