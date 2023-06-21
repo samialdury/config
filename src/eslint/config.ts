@@ -80,6 +80,15 @@ export const config: Linter.Config = {
             {
                 replacements: {
                     err: false,
+                    fn: false,
+                    ref: false,
+                    props: false,
+                    args: false,
+                    params: false,
+                    prod: false,
+                    dev: false,
+                    env: false,
+                    config: false,
                 },
             },
         ],
