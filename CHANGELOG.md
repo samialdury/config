@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 1.2.1
+
+### Patch Changes
+
+-   681513a: Update dependencies
+
 ## 1.2.0
 
 ### Minor Changes
