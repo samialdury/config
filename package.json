@@ -49,9 +49,9 @@
     },
     "devDependencies": {
         "@changesets/changelog-git": "0.1.14",
-        "@changesets/cli": "2.26.1",
-        "@commitlint/cli": "17.6.3",
-        "@commitlint/config-conventional": "17.6.3",
+        "@changesets/cli": "2.26.2",
+        "@commitlint/cli": "17.6.6",
+        "@commitlint/config-conventional": "17.6.6",
         "@commitlint/types": "17.4.4",
         "@types/eslint": "8.37.0",
         "@types/lint-staged": "13.2.0",
@@ -68,6 +68,6 @@
         "lint-staged": "13.2.2",
         "prettier": "2.8.8",
         "tsup": "6.7.0",
-        "typescript": "5.0.4"
+        "typescript": "5.1.5"
     }
 }
