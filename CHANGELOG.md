@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 2.0.2
+
+### Patch Changes
+
+-   c4c763f: Disable `func-style` in Next.js
+
 ## 2.0.1
 
 ### Patch Changes
