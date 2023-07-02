@@ -1,5 +1,16 @@
 # @samialdury/config
 
+## 2.0.0
+
+### Major Changes
+
+-   2a81d2f: `prettier.config` is now a getter function. Allows for extended configuration.
+-   ad43bea: `eslint.config` is now a getter function. Allows for extended configuration.
+
+### Minor Changes
+
+-   7600569: Add declaration map to improve IDE go to definition functionality
+
 ## 1.2.1
 
 ### Patch Changes
