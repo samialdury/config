@@ -25,10 +25,14 @@
         "lib": ["ES2022"],
         "module": "Node16",
         "moduleResolution": "node16",
+        // Source maps
+        "declarationMap": true,
+        "declaration": true,
+        "sourceMap": true,
         // Other
         "noErrorTruncation": true,
-        "noEmit": true,
-        "rootDir": "src"
+        "rootDir": "src",
+        "outDir": "dist"
     },
     "include": ["src"]
 }

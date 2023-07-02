@@ -28,7 +28,8 @@
     },
     "types": "./dist/index.d.ts",
     "files": [
-        "./dist"
+        "./dist",
+        "./src"
     ],
     "scripts": {
         "prepare": "husky install",
