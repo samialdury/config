@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 2.0.1
+
+### Patch Changes
+
+-   27b67a1: Disable `@typescript-eslint/explicit-function-return-type` in Next.js
+
 ## 2.0.0
 
 ### Major Changes
