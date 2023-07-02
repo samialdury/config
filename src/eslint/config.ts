@@ -109,6 +109,9 @@ export function config(params?: ESLintConfigParams): Linter.Config {
                     },
                 },
             ],
+            ...(nextJs && {
+                '@typescript-eslint/explicit-function-return-type': 'off',
+            }),
         },
     }
 }
