@@ -1,9 +1,16 @@
 import type { Config } from 'prettier'
 
-export const config: Config = {
-    printWidth: 80,
-    tabWidth: 4,
-    useTabs: false,
-    semi: false,
-    singleQuote: true,
+import type { PrettierConfigParams } from './types.js'
+
+export function config(params?: PrettierConfigParams): Config {
+    const { plugins = [] } = params ?? {}
+
+    return {
+        printWidth: 80,
+        tabWidth: 4,
+        useTabs: false,
+        semi: false,
+        singleQuote: true,
+        plugins,
+    }
 }
