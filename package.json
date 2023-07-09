@@ -2,22 +2,17 @@
     "name": "@samialdury/config",
     "version": "2.0.2",
     "description": "Configuration files for my projects",
-    "author": "Sami Al-Dury",
-    "license": "MIT",
-    "publishConfig": {
-        "access": "public"
-    },
     "homepage": "https://github.com/samialdury/config#readme",
+    "bugs": {
+        "url": "https://github.com/samialdury/config/issues"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/samialdury/config.git"
     },
-    "bugs": {
-        "url": "https://github.com/samialdury/config/issues"
-    },
+    "license": "MIT",
+    "author": "Sami Al-Dury",
     "type": "module",
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.js",
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
@@ -26,27 +21,25 @@
         },
         "./package.json": "./package.json"
     },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "files": [
         "./dist",
         "./src"
     ],
     "scripts": {
-        "prepare": "husky install",
-        "typecheck": "tsc",
         "build": "rm -rf ./dist && tsup",
-        "prettier": "prettier --cache --cache-location=./.cache/.prettiercache --write .",
-        "prettier:ci": "prettier --check .",
         "eslint": "eslint --max-warnings 0 --cache --cache-location ./.cache/.eslintcache --fix .",
         "eslint:ci": "eslint --max-warnings 0 .",
         "lint": "pnpm prettier && pnpm eslint",
         "lint:ci": "pnpm prettier:ci && pnpm eslint:ci",
-        "version": "changeset add",
-        "release": "pnpm build && changeset publish"
-    },
-    "peerDependencies": {
-        "eslint": "^8.0.0",
-        "prettier": "^2.0.0"
+        "prepare": "husky install",
+        "prettier": "prettier --cache --cache-location=./.cache/.prettiercache --write .",
+        "prettier:ci": "prettier --check .",
+        "release": "pnpm build && changeset publish",
+        "typecheck": "tsc",
+        "version": "changeset add"
     },
     "devDependencies": {
         "@changesets/changelog-github": "0.4.8",
@@ -71,5 +64,12 @@
         "prettier-plugin-packagejson": "2.4.4",
         "tsup": "7.1.0",
         "typescript": "5.1.5"
+    },
+    "peerDependencies": {
+        "eslint": "^8.0.0",
+        "prettier": "^2.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
