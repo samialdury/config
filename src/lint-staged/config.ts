@@ -13,7 +13,7 @@ function toRelative(file: string): string {
 async function removeIgnoredFiles(files: string[]): Promise<string[]> {
     const eslint = new ESLint()
     const isIgnored = await Promise.all(
-        files.map(async (file) => eslint.isPathIgnored(file))
+        files.map(async (file) => eslint.isPathIgnored(file)),
     )
     const filteredFiles = files.filter((_, index) => !isIgnored[index])
     return filteredFiles
