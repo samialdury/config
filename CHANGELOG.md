@@ -1,5 +1,21 @@
 # @samialdury/config
 
+## 3.0.0
+
+### Major Changes
+
+-   [`dfea1b3`](https://github.com/samialdury/config/commit/dfea1b3efbff909e81ae32b8e8a9726cfbca06f0) Thanks [@samialdury](https://github.com/samialdury)! - Extendable configs
+
+### Minor Changes
+
+-   [`52021ad`](https://github.com/samialdury/config/commit/52021adbd31e06e4576588f496c969ab6008baf5) Thanks [@samialdury](https://github.com/samialdury)! - Add `prettier-plugin-sh`
+
+-   [`4867091`](https://github.com/samialdury/config/commit/4867091f16495ba5c89503572025ac0f823cfee3) Thanks [@samialdury](https://github.com/samialdury)! - Update `prettier` peer dependency to `^3`
+
+-   [`5e4c188`](https://github.com/samialdury/config/commit/5e4c188a49e0dd0a1b4d7018821de1a7763fe1ca) Thanks [@samialdury](https://github.com/samialdury)! - Update dependencies
+
+-   [`b2e5dde`](https://github.com/samialdury/config/commit/b2e5ddeddf4d3dc927654b6c4f4c205488dc60e4) Thanks [@samialdury](https://github.com/samialdury)! - Add `prettier-plugin-packagejson`
+
 ## 2.0.2
 
 ### Patch Changes
