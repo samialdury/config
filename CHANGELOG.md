@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 3.0.3
+
+### Patch Changes
+
+-   [`79cd52a`](https://github.com/samialdury/config/commit/79cd52a36842826f9787287a0c0ee32adf1114bb) Thanks [@samialdury](https://github.com/samialdury)! - Require `prettier` ^2"
+
 ## 3.0.2
 
 ### Patch Changes
