@@ -3,7 +3,17 @@ import type { Linter } from 'eslint'
 import type { ESLintConfigParams } from './types.js'
 
 export function config(params?: ESLintConfigParams): Linter.Config {
-    const { nextJs = false } = params ?? {}
+    const {
+        nextJs = false,
+        astro = false,
+        node = false,
+        ignorePatterns = [],
+        env = {},
+        plugins = [],
+        extends: _extends = [],
+        rules = {},
+        overrides = [],
+    } = params ?? {}
 
     return {
         ignorePatterns: [
@@ -19,6 +29,7 @@ export function config(params?: ESLintConfigParams): Linter.Config {
             '**/lint-staged.config.*',
             '**/vitest.config.*',
             '**/tsup.config.*',
+            ...(nextJs || astro ? ['**/tailwind.config.*'] : []),
             ...(nextJs
                 ? [
                       '**/.next/**',
@@ -26,19 +37,22 @@ export function config(params?: ESLintConfigParams): Linter.Config {
                       '**/next-env.d.ts',
                       '**/next.config.*',
                       '**/postcss.config.*',
-                      '**/tailwind.config.*',
                   ]
                 : []),
+            ...(astro ? ['**/.astro/**'] : []),
+            ...ignorePatterns,
         ],
         root: true,
         env: {
             es2022: true,
+            ...(node && { node: true }),
+            ...env,
         },
         parser: '@typescript-eslint/parser',
         parserOptions: {
             project: ['./tsconfig.json'],
         },
-        plugins: ['@typescript-eslint'],
+        plugins: ['@typescript-eslint', ...plugins],
         extends: [
             // Common
             'eslint:recommended',
@@ -52,6 +66,9 @@ export function config(params?: ESLintConfigParams): Linter.Config {
             'plugin:unicorn/recommended',
             // Next.js
             ...(nextJs ? ['next/core-web-vitals'] : []),
+            // Astro
+            ...(astro ? ['plugin:astro/recommended'] : []),
+            ..._extends,
             // Prettier should be always last
             'prettier',
         ],
@@ -113,6 +130,23 @@ export function config(params?: ESLintConfigParams): Linter.Config {
                 '@typescript-eslint/explicit-function-return-type': 'off',
                 'func-style': 'off',
             }),
+            ...rules,
         },
+        overrides: [
+            ...(astro
+                ? [
+                      {
+                          files: ['*.astro'],
+                          parser: 'astro-eslint-parser',
+                          parserOptions: {
+                              parser: '@typescript-eslint/parser',
+                              extraFileExtensions: ['.astro'],
+                          },
+                          rules: {},
+                      },
+                  ]
+                : []),
+            ...overrides,
+        ],
     }
 }

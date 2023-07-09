@@ -1,3 +1,3 @@
 const { commitlint } = require('./dist/index.cjs')
 
-module.exports = commitlint.config
+module.exports = commitlint.config()

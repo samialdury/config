@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { relative } from 'node:path'
 
 import { ESLint } from 'eslint'
 import type { Config } from 'lint-staged'
+
+import type { LintStagedConfigParams } from './types.js'
 
 function toRelative(file: string): string {
     return relative(process.cwd(), file)
@@ -16,18 +19,25 @@ async function removeIgnoredFiles(files: string[]): Promise<string[]> {
     return filteredFiles
 }
 
-export const config: Config = {
-    '*': (files) => {
-        const filesToFormat = files.map((file) => toRelative(file)).join(' ')
+export function config(params?: LintStagedConfigParams): Config {
+    const { configFunctions = {} } = params ?? {}
 
-        return [`prettier --check ${filesToFormat}`]
-    },
-    '**/*.ts': async (files) => {
-        const nonIgnoredFiles = await removeIgnoredFiles(files)
-        const filesToLint = nonIgnoredFiles
-            .map((file) => toRelative(file))
-            .join(' ')
+    return {
+        '*': (files) => {
+            const filesToFormat = files
+                .map((file) => toRelative(file))
+                .join(' ')
 
-        return [`eslint --max-warnings=0 ${filesToLint}`]
-    },
+            return [`prettier --check ${filesToFormat}`]
+        },
+        '**/*.ts': async (files) => {
+            const nonIgnoredFiles = await removeIgnoredFiles(files)
+            const filesToLint = nonIgnoredFiles
+                .map((file) => toRelative(file))
+                .join(' ')
+
+            return [`eslint --max-warnings=0 ${filesToLint}`]
+        },
+        ...configFunctions,
+    }
 }

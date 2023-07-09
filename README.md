@@ -17,22 +17,42 @@ pnpm i -D -E @samialdury/config
 ```
 
 ```js
-// prettier.config.cjs
+// .prettierrc.cjs
 
 const { prettier } = require('@samialdury/config')
 
-module.exports = prettier.config
+module.exports = prettier.config(options)
 ```
 
-## Dependencies
+```js
+// .eslintrc.cjs
+
+const { eslint } = require('@samialdury/config')
+
+module.exports = eslint.config(options)
+```
+
+## Required dependencies
 
 ### Prettier, ESLint
 
+- [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/)
+- [typescript-eslint](https://typescript-eslint.io/)
+- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+- [eslint-import-resolver-typescript](https://github.com/import-js/eslint-import-resolver-typescript)
+- [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+
 ```sh
-pnpm i -D -E eslint prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-unicorn
+pnpm i -D -E prettier eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-unicorn
 ```
 
 ### Husky, lint-staged, commitlint
+
+- [Husky](https://typicode.github.io/husky/)
+- [lint-staged](https://github.com/okonet/lint-staged)
+- [commitlint](https://commitlint.js.org/)
 
 ```sh
 pnpm i -D -E husky lint-staged @commitlint/cli @commitlint/config-conventional

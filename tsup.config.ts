@@ -8,6 +8,7 @@ export default defineConfig({
     bundle: true,
     target: 'es2022',
     outDir: 'dist',
+    external: ['prettier-plugin-tailwindcss', 'prettier-plugin-astro'],
     onSuccess: async () => {
         return new Promise((resolve) => {
             console.log('\nBuild succeeded!\n')
