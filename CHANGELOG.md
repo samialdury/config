@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 3.0.1
+
+### Patch Changes
+
+-   [`249c762`](https://github.com/samialdury/config/commit/249c7624aaecd73afb0af6f7e803624fa78ea787) Thanks [@samialdury](https://github.com/samialdury)! - Add Prettier Astro overrides
+
 ## 3.0.0
 
 ### Major Changes
