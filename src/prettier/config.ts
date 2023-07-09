@@ -25,6 +25,18 @@ export function config(params?: PrettierConfigParams): Config {
             ...(astro ? [require('prettier-plugin-astro')] : []),
             ...plugins,
         ],
-        overrides,
+        overrides: [
+            ...(astro
+                ? [
+                      {
+                          files: '*.astro',
+                          options: {
+                              parser: 'astro',
+                          },
+                      },
+                  ]
+                : []),
+            ...overrides,
+        ],
     }
 }
