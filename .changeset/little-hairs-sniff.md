@@ -2,4 +2,4 @@
 '@samialdury/config': minor
 ---
 
-Add `prettier-plugin-packagejson`
+Add `prettier-plugin-sh`

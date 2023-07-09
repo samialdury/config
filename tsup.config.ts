@@ -9,6 +9,7 @@ export default defineConfig({
     target: 'es2022',
     outDir: 'dist',
     external: [
+        'prettier-plugin-sh',
         'prettier-plugin-packagejson',
         'prettier-plugin-tailwindcss',
         'prettier-plugin-astro',

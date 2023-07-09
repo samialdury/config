@@ -19,6 +19,7 @@ export function config(params?: PrettierConfigParams): Config {
         semi: false,
         singleQuote: true,
         plugins: [
+            require('prettier-plugin-sh'),
             require('prettier-plugin-packagejson'),
             ...(tailwind ? [require('prettier-plugin-tailwindcss')] : []),
             ...(astro ? [require('prettier-plugin-astro')] : []),
