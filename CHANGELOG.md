@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 3.0.2
+
+### Patch Changes
+
+-   [`96d251f`](https://github.com/samialdury/config/commit/96d251fb21f104e5388b4b16ee9e45558721e897) Thanks [@samialdury](https://github.com/samialdury)! - Make `overrides` param optional in Prettier config
+
 ## 3.0.1
 
 ### Patch Changes
