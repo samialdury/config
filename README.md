@@ -45,7 +45,28 @@ module.exports = eslint.config(options)
 - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
 ```sh
-pnpm i -D -E prettier eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-unicorn
+pnpm i -D -E prettier eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-unicorn prettier-plugin-sh prettier-plugin-packagejson
+```
+
+#### Usage with Tailwind CSS
+
+Additional dependencies for [Tailwind CSS](https://tailwindcss.com/) projects:
+
+- [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+
+```sh
+pnpm i -D -E prettier-plugin-tailwindcss
+```
+
+#### Usage with Astro
+
+Additional dependencies for [Astro](https://astro.build/) projects:
+
+- [eslint-plugin-astro](https://github.com/ota-meshi/eslint-plugin-astro)
+- [prettier-plugin-astro](https://github.com/withastro/prettier-plugin-astro)
+
+```sh
+pnpm i -D -E eslint-plugin-astro prettier-plugin-astro
 ```
 
 ### Husky, lint-staged, commitlint
