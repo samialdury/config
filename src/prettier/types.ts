@@ -20,5 +20,5 @@ export interface PrettierConfigParams {
      * Additional `overrides` to be added to the config
      * @default []
      */
-    overrides: Config['overrides']
+    overrides?: Config['overrides']
 }
