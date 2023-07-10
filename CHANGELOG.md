@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 3.0.4
+
+### Patch Changes
+
+-   [`6d1c5d1`](https://github.com/samialdury/config/commit/6d1c5d1107ce941dc0be0631ffa19177000f1dcd) Thanks [@samialdury](https://github.com/samialdury)! - Fix Prettier plugin imports
+
 ## 3.0.3
 
 ### Patch Changes
