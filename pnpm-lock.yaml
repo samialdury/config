@@ -12,11 +12,11 @@ devDependencies:
     specifier: 2.26.2
     version: 2.26.2
   '@commitlint/cli':
-    specifier: 17.6.6
-    version: 17.6.6
+    specifier: 17.6.7
+    version: 17.6.7
   '@commitlint/config-conventional':
-    specifier: 17.6.6
-    version: 17.6.6
+    specifier: 17.6.7
+    version: 17.6.7
   '@commitlint/types':
     specifier: 17.4.4
     version: 17.4.4
@@ -63,11 +63,11 @@ devDependencies:
     specifier: 2.8.8
     version: 2.8.8
   prettier-plugin-packagejson:
-    specifier: 2.4.4
-    version: 2.4.4(prettier@2.8.8)
+    specifier: 2.4.5
+    version: 2.4.5(prettier@2.8.8)
   prettier-plugin-sh:
-    specifier: 0.13.0
-    version: 0.13.0(prettier@2.8.8)
+    specifier: 0.13.1
+    version: 0.13.1(prettier@2.8.8)
   tsup:
     specifier: 7.1.0
     version: 7.1.0(ts-node@10.9.1)(typescript@5.1.6)
@@ -125,7 +125,7 @@ packages:
       outdent: 0.5.0
       prettier: 2.8.8
       resolve-from: 5.0.0
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /@changesets/assemble-release-plan@5.2.4:
@@ -136,7 +136,7 @@ packages:
       '@changesets/get-dependents-graph': 1.3.6
       '@changesets/types': 5.2.1
       '@manypkg/get-packages': 1.1.3
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /@changesets/changelog-git@0.1.14:
@@ -219,7 +219,7 @@ packages:
       '@manypkg/get-packages': 1.1.3
       chalk: 2.4.2
       fs-extra: 7.0.1
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /@changesets/get-github-info@0.5.2:
@@ -313,14 +313,14 @@ packages:
       prettier: 2.8.8
     dev: true
 
-  /@commitlint/cli@17.6.6:
-    resolution: {integrity: sha512-sTKpr2i/Fjs9OmhU+beBxjPavpnLSqZaO6CzwKVq2Tc4UYVTMFgpKOslDhUBVlfAUBfjVO8ParxC/MXkIOevEA==}
+  /@commitlint/cli@17.6.7:
+    resolution: {integrity: sha512-nzZmfO5KIOupYppn1MsnYX/80I+KDlxiwkks3CJT0XT+t34UgqGi3eSyEuzgcIjPlORk5/GMaAEiys78iLfGMg==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.4
-      '@commitlint/lint': 17.6.6
-      '@commitlint/load': 17.5.0
+      '@commitlint/lint': 17.6.7
+      '@commitlint/load': 17.6.7
       '@commitlint/read': 17.5.1
       '@commitlint/types': 17.4.4
       execa: 5.1.1
@@ -333,23 +333,23 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-conventional@17.6.6:
-    resolution: {integrity: sha512-phqPz3BDhfj49FUYuuZIuDiw+7T6gNAEy7Yew1IBHqSohVUCWOK2FXMSAExzS2/9X+ET93g0Uz83KjiHDOOFag==}
+  /@commitlint/config-conventional@17.6.7:
+    resolution: {integrity: sha512-4oTpEUC0HRM54QRHBPMOJW1pETp7usxXn9RuNYNWHcmu8wi1mpws95hvS20u2n6HtIkTn0jfn7vHioCm4AGUTw==}
     engines: {node: '>=v14'}
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
     dev: true
 
-  /@commitlint/config-validator@17.4.4:
-    resolution: {integrity: sha512-bi0+TstqMiqoBAQDvdEP4AFh0GaKyLFlPPEObgI29utoKEYoPQTvF0EYqIwYYLEoJYhj5GfMIhPHJkTJhagfeg==}
+  /@commitlint/config-validator@17.6.7:
+    resolution: {integrity: sha512-vJSncmnzwMvpr3lIcm0I8YVVDJTzyjy7NZAeXbTXy+MPUdAr9pKyyg7Tx/ebOQ9kqzE6O9WT6jg2164br5UdsQ==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/types': 17.4.4
       ajv: 8.12.0
     dev: true
 
-  /@commitlint/ensure@17.4.4:
-    resolution: {integrity: sha512-AHsFCNh8hbhJiuZ2qHv/m59W/GRE9UeOXbkOqxYMNNg9pJ7qELnFcwj5oYpa6vzTSHtPGKf3C2yUFNy1GGHq6g==}
+  /@commitlint/ensure@17.6.7:
+    resolution: {integrity: sha512-mfDJOd1/O/eIb/h4qwXzUxkmskXDL9vNPnZ4AKYKiZALz4vHzwMxBSYtyL2mUIDeU9DRSpEUins8SeKtFkYHSw==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/types': 17.4.4
@@ -373,31 +373,31 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@commitlint/is-ignored@17.6.6:
-    resolution: {integrity: sha512-4Fw875faAKO+2nILC04yW/2Vy/wlV3BOYCSQ4CEFzriPEprc1Td2LILmqmft6PDEK5Sr14dT9tEzeaZj0V56Gg==}
+  /@commitlint/is-ignored@17.6.7:
+    resolution: {integrity: sha512-vqyNRqtbq72P2JadaoWiuoLtXIs9SaAWDqdtef6G2zsoXqKFc7vqj1f+thzVgosXG3X/5K9jNp+iYijmvOfc/g==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/types': 17.4.4
       semver: 7.5.2
     dev: true
 
-  /@commitlint/lint@17.6.6:
-    resolution: {integrity: sha512-5bN+dnHcRLkTvwCHYMS7Xpbr+9uNi0Kq5NR3v4+oPNx6pYXt8ACuw9luhM/yMgHYwW0ajIR20wkPAFkZLEMGmg==}
+  /@commitlint/lint@17.6.7:
+    resolution: {integrity: sha512-TW+AozfuOFMrHn+jdwtz0IWu8REKFp0eryOvoBp2r8IXNc4KihKB1spAiUB6SFyHD6hVVeolz12aHnJ3Mb+xVQ==}
     engines: {node: '>=v14'}
     dependencies:
-      '@commitlint/is-ignored': 17.6.6
-      '@commitlint/parse': 17.6.5
-      '@commitlint/rules': 17.6.5
+      '@commitlint/is-ignored': 17.6.7
+      '@commitlint/parse': 17.6.7
+      '@commitlint/rules': 17.6.7
       '@commitlint/types': 17.4.4
     dev: true
 
-  /@commitlint/load@17.5.0:
-    resolution: {integrity: sha512-l+4W8Sx4CD5rYFsrhHH8HP01/8jEP7kKf33Xlx2Uk2out/UKoKPYMOIRcDH5ppT8UXLMV+x6Wm5osdRKKgaD1Q==}
+  /@commitlint/load@17.6.7:
+    resolution: {integrity: sha512-QZ2rJTbX55BQdYrCm/p6+hh/pFBgC9nTJxfsrK6xRPe2thiQzHN0AQDBqBwAirn6gIkHrjIbCbtAE6kiDYLjrw==}
     engines: {node: '>=v14'}
     dependencies:
-      '@commitlint/config-validator': 17.4.4
+      '@commitlint/config-validator': 17.6.7
       '@commitlint/execute-rule': 17.4.0
-      '@commitlint/resolve-extends': 17.4.4
+      '@commitlint/resolve-extends': 17.6.7
       '@commitlint/types': 17.4.4
       '@types/node': 20.4.5
       chalk: 4.1.2
@@ -419,8 +419,8 @@ packages:
     engines: {node: '>=v14'}
     dev: true
 
-  /@commitlint/parse@17.6.5:
-    resolution: {integrity: sha512-0zle3bcn1Hevw5Jqpz/FzEWNo2KIzUbc1XyGg6WrWEoa6GH3A1pbqNF6MvE6rjuy6OY23c8stWnb4ETRZyN+Yw==}
+  /@commitlint/parse@17.6.7:
+    resolution: {integrity: sha512-ibO03BgEns+JJpohpBZYD49mCdSNMg6fTv7vA5yqzEFWkBQk5NWhEBw2yG+Z1UClStIRkMkAYyI2HzoQG9tCQQ==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/types': 17.4.4
@@ -439,11 +439,11 @@ packages:
       minimist: 1.2.8
     dev: true
 
-  /@commitlint/resolve-extends@17.4.4:
-    resolution: {integrity: sha512-znXr1S0Rr8adInptHw0JeLgumS11lWbk5xAWFVno+HUFVN45875kUtqjrI6AppmD3JI+4s0uZlqqlkepjJd99A==}
+  /@commitlint/resolve-extends@17.6.7:
+    resolution: {integrity: sha512-PfeoAwLHtbOaC9bGn/FADN156CqkFz6ZKiVDMjuC2N5N0740Ke56rKU7Wxdwya8R8xzLK9vZzHgNbuGhaOVKIg==}
     engines: {node: '>=v14'}
     dependencies:
-      '@commitlint/config-validator': 17.4.4
+      '@commitlint/config-validator': 17.6.7
       '@commitlint/types': 17.4.4
       import-fresh: 3.3.0
       lodash.mergewith: 4.6.2
@@ -451,11 +451,11 @@ packages:
       resolve-global: 1.0.0
     dev: true
 
-  /@commitlint/rules@17.6.5:
-    resolution: {integrity: sha512-uTB3zSmnPyW2qQQH+Dbq2rekjlWRtyrjDo4aLFe63uteandgkI+cc0NhhbBAzcXShzVk0qqp8SlkQMu0mgHg/A==}
+  /@commitlint/rules@17.6.7:
+    resolution: {integrity: sha512-x/SDwDTN3w3Gr5xkhrIORu96rlKCc8ZLYEMXRqi9+MB33st2mKcGvKa5uJuigHlbl3xm75bAAubATrodVrjguQ==}
     engines: {node: '>=v14'}
     dependencies:
-      '@commitlint/ensure': 17.4.4
+      '@commitlint/ensure': 17.6.7
       '@commitlint/message': 17.4.2
       '@commitlint/to-lines': 17.4.0
       '@commitlint/types': 17.4.4
@@ -834,7 +834,7 @@ packages:
       is-glob: 4.0.3
       open: 9.1.0
       picocolors: 1.0.0
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /@tsconfig/node10@1.0.9:
@@ -3463,8 +3463,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-packagejson@2.4.4(prettier@2.8.8):
-    resolution: {integrity: sha512-Xk74PATiZDW+kELIh8e8EY0JpwHo9xbSGc4YfIfxmITWAF8yqHa7A+yAQLLMRoQEkKNi+xaMnR8BX2F9zrsczg==}
+  /prettier-plugin-packagejson@2.4.5(prettier@2.8.8):
+    resolution: {integrity: sha512-glG71jE1gO3y5+JNAhC8X+4yrlN28rub6Aj461SKbaPie9RgMiHKcInH2Moi2VGOfkTXaEHBhg4uVMBqa+kBUA==}
     peerDependencies:
       prettier: '>= 1.16.0'
     peerDependenciesMeta:
@@ -3472,12 +3472,12 @@ packages:
         optional: true
     dependencies:
       prettier: 2.8.8
-      sort-package-json: 2.5.0
+      sort-package-json: 2.5.1
       synckit: 0.8.5
     dev: true
 
-  /prettier-plugin-sh@0.13.0(prettier@2.8.8):
-    resolution: {integrity: sha512-YAoRiG/CJ5cK7ha5khzwrKTTAsYv0v+bgImTPo/ITuFJy68ThAUhz0shzY2xaEkLHy/e4yFI+VcmLsNdCzVxkA==}
+  /prettier-plugin-sh@0.13.1(prettier@2.8.8):
+    resolution: {integrity: sha512-ytMcl1qK4s4BOFGvsc9b0+k9dYECal7U29bL/ke08FEUsF/JLN0j6Peo0wUkFDG4y2UHLMhvpyd6Sd3zDXe/eg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -3485,7 +3485,6 @@ packages:
       mvdan-sh: 0.10.1
       prettier: 2.8.8
       sh-syntax: 0.4.1
-      synckit: 0.8.5
     dev: true
 
   /prettier@2.8.8:
@@ -3850,8 +3849,8 @@ packages:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
     dev: true
 
-  /sort-package-json@2.5.0:
-    resolution: {integrity: sha512-KIsqEi/ameVyhhatpzwialQVSMP1mFzRLJgTBKJDz0duQmhnBDjf8MFyFoIoVnW69SqjH3/bziCSlgiuz2KbHg==}
+  /sort-package-json@2.5.1:
+    resolution: {integrity: sha512-vx/KoZxm8YNMUqdlw7SGTfqR5pqZ/sUfgOuRtDILiOy/3AvzhAibyUe2cY3OpLs3oRSow9up4yLVtQaM24rbDQ==}
     hasBin: true
     dependencies:
       detect-indent: 7.0.1
@@ -4048,7 +4047,7 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@pkgr/utils': 2.4.0
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /tapable@2.2.1:
@@ -4178,10 +4177,6 @@ packages:
 
   /tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
-    dev: true
-
-  /tslib@2.5.0:
-    resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
     dev: true
 
   /tslib@2.6.0:
