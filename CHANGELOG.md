@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 4.0.0
+
+### Major Changes
+
+-   [`2206fef`](https://github.com/samialdury/config/commit/2206fef5cd9695dcd3cf0825d1a7409c0f302291) Thanks [@samialdury](https://github.com/samialdury)! - Update Prettier to v3
+
 ## 3.0.5
 
 ### Patch Changes
