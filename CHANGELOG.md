@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 3.0.5
+
+### Patch Changes
+
+-   [`526c788`](https://github.com/samialdury/config/commit/526c7885f96c2d698edcbab1f79a0e96c8c59127) Thanks [@samialdury](https://github.com/samialdury)! - Update dependencies
+
 ## 3.0.4
 
 ### Patch Changes
