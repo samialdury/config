@@ -45,7 +45,7 @@ module.exports = eslint.config(options)
 - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
 ```sh
-pnpm i -D -E prettier@2 eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-unicorn prettier-plugin-sh prettier-plugin-packagejson
+pnpm i -D -E prettier eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-unicorn prettier-plugin-sh prettier-plugin-packagejson
 ```
 
 #### Usage with Tailwind CSS
