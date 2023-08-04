@@ -16,34 +16,25 @@ export interface ESLintConfigParams {
      * @default false
      */
     astro?: boolean
+    fp?: boolean
     /**
-     * Additional `ignorePatterns` to be added to the config
+     * Additional `ignores` to be added to the config
      * @default []
      */
-    ignorePatterns?: Linter.Config['ignorePatterns']
-    /**
-     * Additional `env` to be added to the config
-     * @default {}
-     */
-    env?: Linter.Config['env']
+    ignores?: Linter.FlatConfig['ignores']
     /**
      * Additional `plugins` to be added to the config
      * @default []
      */
-    plugins?: Linter.Config['plugins']
-    /**
-     * Additional `extends` to be added to the config
-     * @default []
-     */
-    extends?: Linter.Config['extends']
+    plugins?: Linter.FlatConfig['plugins']
     /**
      * Additional `rules` to be added to the config
      * @default {}
      */
-    rules?: Linter.Config['rules']
+    rules?: Linter.FlatConfig['rules']
     /**
-     * Additional `overrides` to be added to the config
-     * @default []
+     * Additional `settings` to be added to the config
+     * @default {}
      */
-    overrides?: Linter.Config['overrides']
+    settings?: Linter.FlatConfig['settings']
 }

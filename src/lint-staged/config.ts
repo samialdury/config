@@ -1,10 +1,16 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { relative } from 'node:path'
 
-import { ESLint } from 'eslint'
+import eslint from 'eslint/use-at-your-own-risk'
 import type { Config } from 'lint-staged'
 
 import type { LintStagedConfigParams } from './types.js'
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-assignment
+const { FlatESLint: ESLint } = eslint as unknown as {
+    // eslint-disable-next-line @typescript-eslint/consistent-type-imports
+    FlatESLint: typeof import('eslint').ESLint
+}
 
 function toRelative(file: string): string {
     return relative(process.cwd(), file)
@@ -36,7 +42,7 @@ export function config(params?: LintStagedConfigParams): Config {
                 .map((file) => toRelative(file))
                 .join(' ')
 
-            return [`eslint --max-warnings=0 ${filesToLint}`]
+            return [`eslint --max-warnings 0 ${filesToLint}`]
         },
         ...configFunctions,
     }
