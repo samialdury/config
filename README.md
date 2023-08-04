@@ -7,76 +7,57 @@ This repository contains common configuration files for often used tools.
 
 - [Prettier](src/prettier/config.ts)
 - [ESLint](src/eslint/config.ts)
-- [lint-staged](src/lint-staged/config.ts)
 - [commitlint](src/commitlint/config.ts)
+- [lint-staged](src/lint-staged/config.ts)
+- [semantic-release](src/semantic-release/config.ts)
 
-## Example usage
+## Installation
 
 ```sh
-pnpm i -D -E @samialdury/config
+pnpm i -D -E @samialdury/config prettier eslint husky lint-staged @commitlint/cli
 ```
 
+## Usage
+
 ```js
-// .prettierrc.cjs
+// prettier.config.cjs
 
 const { prettier } = require('@samialdury/config')
 
-module.exports = prettier.config(options)
+module.exports = prettier.config(opts)
 ```
 
 ```js
-// .eslintrc.cjs
+// eslint.config.js
 
-const { eslint } = require('@samialdury/config')
+import { eslint } from '@samialdury/config'
 
-module.exports = eslint.config(options)
+export default [...eslint.config(opts)]
 ```
 
-## Required dependencies
+```js
+// commitlint.config.cjs
 
-### Prettier, ESLint
+const { commitlint } = require('@samialdury/config')
 
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
-- [typescript-eslint](https://typescript-eslint.io/)
-- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-- [eslint-import-resolver-typescript](https://github.com/import-js/eslint-import-resolver-typescript)
-- [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
-- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
-
-```sh
-pnpm i -D -E prettier eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-unicorn prettier-plugin-sh prettier-plugin-packagejson
+module.exports = commitlint.config(opts)
 ```
 
-#### Usage with Tailwind CSS
+```js
+// lint-staged.config.cjs
 
-Additional dependencies for [Tailwind CSS](https://tailwindcss.com/) projects:
+const { lintStaged } = require('@samialdury/config')
 
-- [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
-
-```sh
-pnpm i -D -E prettier-plugin-tailwindcss
+module.exports = lintStaged.config(opts)
 ```
 
-#### Usage with Astro
+```js
+// release.config.cjs
 
-Additional dependencies for [Astro](https://astro.build/) projects:
+const { semanticRelease } = require('@samialdury/config')
 
-- [eslint-plugin-astro](https://github.com/ota-meshi/eslint-plugin-astro)
-- [prettier-plugin-astro](https://github.com/withastro/prettier-plugin-astro)
+module.exports = semanticRelease.config(opts)
 
-```sh
-pnpm i -D -E eslint-plugin-astro prettier-plugin-astro
-```
-
-### Husky, lint-staged, commitlint
-
-- [Husky](https://typicode.github.io/husky/)
-- [lint-staged](https://github.com/okonet/lint-staged)
-- [commitlint](https://commitlint.js.org/)
-
-```sh
-pnpm i -D -E husky lint-staged @commitlint/cli @commitlint/config-conventional
 ```
 
 ## License
