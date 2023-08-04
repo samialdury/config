@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 4.2.0
+
+### Minor Changes
+
+-   [`ac2805e`](https://github.com/samialdury/config/commit/ac2805e8f3cfea5aa4c7e40c2ab30aff4c5e4d08) Thanks [@samialdury](https://github.com/samialdury)! - Include Prettier plugins as dependencies
+
 ## 4.1.0
 
 ### Minor Changes
