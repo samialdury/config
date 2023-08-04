@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
         inputs:
             acknowledge:
-                description: 'I understand that this action will publish a new NPM & GitHub release'
+                description: 'I understand that this action will publish a new NPM & GitHub release.'
                 required: true
                 type: boolean
 
@@ -57,7 +57,7 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-${{ env.PNPM_VERSION }}-store-
 
-            - name: Install NPM dependencies
+            - name: Install npm dependencies
               timeout-minutes: 2
               run: |
                   pnpm install --frozen-lockfile
@@ -67,7 +67,7 @@ jobs:
               run: |
                   pnpm build
 
-            - name: Release
+            - name: Release to NPM & GitHub
               timeout-minutes: 2
               run: |
                   pnpm exec semantic-release
