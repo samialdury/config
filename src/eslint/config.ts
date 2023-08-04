@@ -24,11 +24,12 @@ export function config(params?: ESLintConfigParams): Linter.Config {
             '**/coverage/**',
             '**/.husky/**',
             '**/.eslintrc.*',
-            '**/.prettierrc.*',
+            '**/prettier.config.*',
             '**/commitlint.config.*',
             '**/lint-staged.config.*',
             '**/vitest.config.*',
             '**/tsup.config.*',
+            '**/release.config.*',
             ...(nextJs || astro ? ['**/tailwind.config.*'] : []),
             ...(nextJs
                 ? [

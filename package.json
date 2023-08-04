@@ -62,12 +62,17 @@
         "prettier": "3.0.1",
         "prettier-plugin-packagejson": "2.4.5",
         "prettier-plugin-sh": "0.13.1",
+        "semantic-release": "21.0.7",
         "tsup": "7.1.0",
         "typescript": "5.1.6"
     },
     "peerDependencies": {
+        "@commitlint/cli": "^17.0.0",
+        "@commitlint/config-conventional": "^17.0.0",
         "eslint": "^8.0.0",
-        "prettier": "^3.0.0"
+        "lint-staged": "^13.0.0",
+        "prettier": "^3.0.0",
+        "semantic-release": "^21.0.0"
     },
     "publishConfig": {
         "access": "public"
