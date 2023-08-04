@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 4.1.0
+
+### Minor Changes
+
+-   [`b55f436`](https://github.com/samialdury/config/commit/b55f4361cf2f73bc77431554dcfb572ab0117da5) Thanks [@samialdury](https://github.com/samialdury)! - Add config for Semantic Release
+
 ## 4.0.0
 
 ### Major Changes
