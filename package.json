@@ -62,6 +62,8 @@
         "@changesets/cli": "2.26.2",
         "@commitlint/cli": "17.6.7",
         "@commitlint/types": "17.4.4",
+        "@semantic-release/changelog": "6.0.3",
+        "@semantic-release/git": "10.0.1",
         "@types/eslint": "8.44.1",
         "@types/eslint__js": "8.42.0",
         "@types/lint-staged": "13.2.0",
