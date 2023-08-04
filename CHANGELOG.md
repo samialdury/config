@@ -1,5 +1,11 @@
 # @samialdury/config
 
+## 5.0.0
+
+### Major Changes
+
+-   [#35](https://github.com/samialdury/config/pull/35) [`3f05a71`](https://github.com/samialdury/config/commit/3f05a711cfa738bdbc34031ed5bfb7fb85030776) Thanks [@samialdury](https://github.com/samialdury)! - New ESLint config format
+
 ## 4.2.0
 
 ### Minor Changes
