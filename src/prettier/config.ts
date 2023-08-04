@@ -19,10 +19,12 @@ export function config(params?: PrettierConfigParams): Config {
         semi: false,
         singleQuote: true,
         plugins: [
-            'prettier-plugin-sh',
-            'prettier-plugin-packagejson',
-            ...(tailwind ? ['prettier-plugin-tailwindcss'] : []),
-            ...(astro ? ['prettier-plugin-astro'] : []),
+            require.resolve('prettier-plugin-sh'),
+            require.resolve('prettier-plugin-packagejson'),
+            ...(tailwind
+                ? [require.resolve('prettier-plugin-tailwindcss')]
+                : []),
+            ...(astro ? [require.resolve('prettier-plugin-astro')] : []),
             ...plugins,
         ],
         overrides: [
