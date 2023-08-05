@@ -12,8 +12,6 @@ export interface SemanticReleaseConfigParams {
      * @default
      * [
      *     ...angularPreset,
-     *     { type: 'refactor', release: 'patch' },
-     *     { type: 'chore', release: 'patch' },
      *     { scope: 'no-release', release: false },
      * ]
      */

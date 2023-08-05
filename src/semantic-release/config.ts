@@ -19,8 +19,6 @@ export function config(params?: SemanticReleaseConfigParams): Options {
                 {
                     preset: 'angular',
                     releaseRules: [
-                        { type: 'refactor', release: 'patch' },
-                        { type: 'chore', release: 'patch' },
                         { scope: 'no-release', release: false },
                         ...releaseRules,
                     ],
