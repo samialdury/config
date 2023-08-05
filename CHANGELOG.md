@@ -1,3 +1,10 @@
+## [5.1.2](https://github.com/samialdury/config/compare/v5.1.1...v5.1.2) (2023-08-05)
+
+
+### Bug Fixes
+
+* **semantic-release:** tweak release rules ([9c84143](https://github.com/samialdury/config/commit/9c841434d36edee51801e878bf172d2c2636660a))
+
 ## [5.1.1](https://github.com/samialdury/config/compare/v5.1.0...v5.1.1) (2023-08-05)
 
 
