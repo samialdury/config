@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/samialdury/config/compare/v5.2.0...v5.3.0) (2023-08-05)
+
+
+### Features
+
+* **ci:** sign release commits & pushes ([a9914ef](https://github.com/samialdury/config/commit/a9914efe26969d3e002c466cc1ae742a3dfec71d))
+
 # [5.2.0](https://github.com/samialdury/config/compare/v5.1.2...v5.2.0) (2023-08-05)
 
 
