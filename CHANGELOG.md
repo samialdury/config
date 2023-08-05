@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/samialdury/config/compare/v5.1.2...v5.2.0) (2023-08-05)
+
+
+### Features
+
+* set up npm provenance ([07c21aa](https://github.com/samialdury/config/commit/07c21aa6a94bbd2b8f9c4eb8716c9f06b4388e67))
+
 ## [5.1.2](https://github.com/samialdury/config/compare/v5.1.1...v5.1.2) (2023-08-05)
 
 
