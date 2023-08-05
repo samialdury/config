@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/samialdury/config/compare/v5.3.0...v5.4.0) (2023-08-05)
+
+
+### Features
+
+* use makefile ([8b4eb1b](https://github.com/samialdury/config/commit/8b4eb1b1878ad1de38e59e792b6259537a8eab55))
+
 # [5.3.0](https://github.com/samialdury/config/compare/v5.2.0...v5.3.0) (2023-08-05)
 
 
