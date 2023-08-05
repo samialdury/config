@@ -1,3 +1,10 @@
+## [5.4.1](https://github.com/samialdury/config/compare/v5.4.0...v5.4.1) (2023-08-05)
+
+
+### Bug Fixes
+
+* **semantic-release:** do not include `skip-ci` in release commit ([7ac9b32](https://github.com/samialdury/config/commit/7ac9b32054370efc01140d02d3c3b93b50598b9f))
+
 # [5.4.0](https://github.com/samialdury/config/compare/v5.3.0...v5.4.0) (2023-08-05)
 
 
