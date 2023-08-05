@@ -8,7 +8,7 @@ export function config(params?: SemanticReleaseConfigParams): Options {
         branches = ['main'],
         releaseRules = [],
         assets = ['package.json', 'CHANGELOG.md'],
-        message = 'chore(release): v${nextRelease.version} [skip ci]',
+        message = 'chore(release): v${nextRelease.version}',
     } = params ?? {}
 
     return {
