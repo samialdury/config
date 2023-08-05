@@ -1,9 +1,23 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import type { Options } from 'semantic-release'
+
 export interface SemanticReleaseConfigParams {
     /**
      * The branches on which releases should happen
      * @default ['main']
      */
-    branches?: string[]
+    branches?: Options['branches']
+    /**
+     * Additional release rules for commit analyzer
+     * @default
+     * [
+     *     ...angularPreset,
+     *     { type: 'refactor', release: 'patch' },
+     *     { type: 'chore', release: 'patch' },
+     *     { scope: 'no-release', release: false },
+     * ]
+     */
+    releaseRules?: any[]
     /**
      * Files to include in the release commit
      * @default ['package.json', 'CHANGELOG.md']

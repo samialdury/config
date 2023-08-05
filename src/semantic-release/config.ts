@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { Options } from 'semantic-release'
 
 import type { SemanticReleaseConfigParams } from './types.js'
@@ -5,6 +6,7 @@ import type { SemanticReleaseConfigParams } from './types.js'
 export function config(params?: SemanticReleaseConfigParams): Options {
     const {
         branches = ['main'],
+        releaseRules = [],
         assets = ['package.json', 'CHANGELOG.md'],
         message = 'chore(release): ${nextRelease.version} [skip ci]',
     } = params ?? {}
@@ -18,7 +20,9 @@ export function config(params?: SemanticReleaseConfigParams): Options {
                     preset: 'angular',
                     releaseRules: [
                         { type: 'refactor', release: 'patch' },
-                        { scope: 'chore', release: 'patch' },
+                        { type: 'chore', release: 'patch' },
+                        { scope: 'no-release', release: false },
+                        ...releaseRules,
                     ],
                 },
             ],
