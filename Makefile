@@ -21,7 +21,7 @@ install: ## install all dependencies
 
 .PHONY: typecheck
 typecheck: ## compile TS (no emit)
-	@$(BIN)/tsc
+	@$(BIN)/tsc --noEmit
 
 ##@ Build
 
