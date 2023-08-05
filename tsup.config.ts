@@ -13,10 +13,14 @@ export default defineConfig({
             console.log('\nBuild succeeded!\n')
             console.log('Generating declaration files...\n')
 
-            spawn('tsc', ['--emitDeclarationOnly', '--declaration'], {
-                stdio: 'inherit',
-                shell: true,
-            })
+            spawn(
+                './node_modules/.bin/tsc',
+                ['--emitDeclarationOnly', '--declaration'],
+                {
+                    stdio: 'inherit',
+                    shell: true,
+                },
+            )
                 .on('error', (err) => {
                     console.error(err)
                 })

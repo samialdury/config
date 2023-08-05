@@ -28,17 +28,6 @@
         "./dist",
         "./src"
     ],
-    "scripts": {
-        "build": "rm -rf ./dist && tsup",
-        "eslint": "eslint --max-warnings 0 --cache --cache-location ./.cache/eslint --fix .",
-        "eslint:ci": "eslint --max-warnings 0 .",
-        "lint": "pnpm prettier && pnpm eslint",
-        "lint:ci": "pnpm prettier:ci && pnpm eslint:ci",
-        "prepare": "husky install",
-        "prettier": "prettier --cache --cache-location=./.cache/prettier --write .",
-        "prettier:ci": "prettier --check .",
-        "typecheck": "tsc"
-    },
     "dependencies": {
         "@commitlint/config-conventional": "17.6.7",
         "@eslint/js": "8.46.0",

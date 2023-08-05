@@ -75,17 +75,17 @@ jobs:
             - name: Install npm dependencies
               timeout-minutes: 2
               run: |
-                  pnpm install --frozen-lockfile
+                  make install-ci
 
             - name: Bundle TypeScript
               timeout-minutes: 2
               run: |
-                  pnpm build
+                  make build
 
             - name: Release to NPM & GitHub
               timeout-minutes: 2
               run: |
-                  pnpm exec semantic-release
+                  make release
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
                   GITHUB_TOKEN: ${{ secrets.BOT_PAT }}

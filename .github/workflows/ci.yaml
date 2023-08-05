@@ -47,19 +47,24 @@ jobs:
             - name: Install npm dependencies
               timeout-minutes: 2
               run: |
-                  pnpm install --frozen-lockfile
+                  make install-ci
 
             - name: Check TypeScript
               timeout-minutes: 2
               run: |
-                  pnpm typecheck
+                  make typecheck
 
             - name: Bundle TypeScript
               timeout-minutes: 2
               run: |
-                  pnpm build
+                  make build
 
-            - name: Check formatting & lint
+            - name: Check formatting
               timeout-minutes: 2
               run: |
-                  pnpm lint:ci
+                  make format-ci
+
+            - name: Check lint errors
+              timeout-minutes: 2
+              run: |
+                  make lint-ci

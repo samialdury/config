@@ -23,7 +23,7 @@ export interface SemanticReleaseConfigParams {
     assets?: string[]
     /**
      * The message for the release commit
-     * @default 'chore(release): ${nextRelease.version} [skip ci]'
+     * @default 'chore(release): v${nextRelease.version} [skip ci]'
      */
     message?: string
 }
