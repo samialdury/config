@@ -1,3 +1,10 @@
+# [5.5.0](https://github.com/samialdury/config/compare/v5.4.2...v5.5.0) (2023-08-05)
+
+
+### Features
+
+* **semantic-release:** include plugins in dependencies ([04204cc](https://github.com/samialdury/config/commit/04204ccacf3d9ee57f293095efc97c764a7ab6ce))
+
 ## [5.4.2](https://github.com/samialdury/config/compare/v5.4.1...v5.4.2) (2023-08-05)
 
 
