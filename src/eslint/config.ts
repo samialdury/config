@@ -172,6 +172,10 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
             settings: {
                 'import/parsers': {
                     '@typescript-eslint/parser': [
+                        '.js',
+                        '.jsx',
+                        '.cjs',
+                        '.mjs',
                         '.ts',
                         '.tsx',
                         '.mts',
