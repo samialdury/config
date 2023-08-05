@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/samialdury/config/compare/v5.1.0...v5.1.1) (2023-08-05)
+
+
+### Bug Fixes
+
+* **semantic-release:** patch version on chore commit ([d7a1cc7](https://github.com/samialdury/config/commit/d7a1cc71c1c52f4cca5ca29036b2cb46a65e332a))
+
 # [5.1.0](https://github.com/samialdury/config/compare/v5.0.0...v5.1.0) (2023-08-04)
 
 
