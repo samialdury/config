@@ -1,3 +1,10 @@
+## [5.4.2](https://github.com/samialdury/config/compare/v5.4.1...v5.4.2) (2023-08-05)
+
+
+### Bug Fixes
+
+* **eslint:** ts parser extensions ([3a89487](https://github.com/samialdury/config/commit/3a8948723f18433d1e73bd4e33a3cf8119ac06b3))
+
 ## [5.4.1](https://github.com/samialdury/config/compare/v5.4.0...v5.4.1) (2023-08-05)
 
 
