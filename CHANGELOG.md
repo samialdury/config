@@ -1,3 +1,10 @@
+# [5.6.0](https://github.com/samialdury/config/compare/v5.5.0...v5.6.0) (2023-08-06)
+
+
+### Features
+
+* `typeScript` & `browser` config option ([01955de](https://github.com/samialdury/config/commit/01955de91682aa05dec8aefce71728eb27669cea))
+
 # [5.5.0](https://github.com/samialdury/config/compare/v5.4.2...v5.5.0) (2023-08-05)
 
 
