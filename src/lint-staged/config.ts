@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { relative } from 'node:path'
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import eslint from 'eslint/use-at-your-own-risk'
 import type { Config } from 'lint-staged'
 
