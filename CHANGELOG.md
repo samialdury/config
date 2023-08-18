@@ -1,3 +1,13 @@
+## [5.6.1](https://github.com/samialdury/config/compare/v5.6.0...v5.6.1) (2023-08-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-config-prettier to v8.10.0 ([#39](https://github.com/samialdury/config/issues/39)) ([c02ffe5](https://github.com/samialdury/config/commit/c02ffe5342c0315c694c502c9b078508f24478b4))
+* **deps:** update dependency eslint-config-prettier to v9 ([#44](https://github.com/samialdury/config/issues/44)) ([f3d494c](https://github.com/samialdury/config/commit/f3d494c36743fd382ac191e039591db038b78003))
+* **deps:** update linters (minor) ([#43](https://github.com/samialdury/config/issues/43)) ([8a4d24a](https://github.com/samialdury/config/commit/8a4d24a42219a2e415101a23b467c92c26b6665c))
+* **deps:** update linters to v6.2.1 (patch) ([#38](https://github.com/samialdury/config/issues/38)) ([0a21994](https://github.com/samialdury/config/commit/0a2199423415170ce571627ae3b6d4e22676158f))
+
 # [5.6.0](https://github.com/samialdury/config/compare/v5.5.0...v5.6.0) (2023-08-06)
 
 
