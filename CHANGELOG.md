@@ -1,3 +1,22 @@
+# [5.7.0](https://github.com/samialdury/config/compare/v5.6.1...v5.7.0) (2023-09-06)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies (minor) ([#50](https://github.com/samialdury/config/issues/50)) ([b8764f7](https://github.com/samialdury/config/commit/b8764f731a9d1e70950079ef7bba1fe4aaed0920))
+* **deps:** update all non-major dependencies (minor) ([#55](https://github.com/samialdury/config/issues/55)) ([19a64a6](https://github.com/samialdury/config/commit/19a64a62aee08242d452f170ec2dab8b36bd2778))
+* **deps:** update all non-major dependencies (patch) ([#48](https://github.com/samialdury/config/issues/48)) ([8c4aab2](https://github.com/samialdury/config/commit/8c4aab2cc3c9774d1a13e05a47741522c7953e88))
+* **deps:** update dependency @eslint/js to v8.48.0 ([#59](https://github.com/samialdury/config/issues/59)) ([cb0e64b](https://github.com/samialdury/config/commit/cb0e64b0408c3b01ac050e0e5155644be7aab950))
+* **deps:** update dependency prettier-plugin-tailwindcss to v0.5.4 ([#58](https://github.com/samialdury/config/issues/58)) ([a4323fd](https://github.com/samialdury/config/commit/a4323fdc7b05c12d696d8a9da8a2740c42560b03))
+* **deps:** update linters (minor) ([#51](https://github.com/samialdury/config/issues/51)) ([68ea0aa](https://github.com/samialdury/config/commit/68ea0aa9c5e3a375fcd71dcebc5eebed95a3aa20))
+* **deps:** update linters (minor) ([#60](https://github.com/samialdury/config/issues/60)) ([48e132c](https://github.com/samialdury/config/commit/48e132c48bd007b774258fdeab4bb8672aa62bf8))
+* **deps:** update linters (patch) ([#54](https://github.com/samialdury/config/issues/54)) ([87cc695](https://github.com/samialdury/config/commit/87cc69544b5fc2dc0e2f4fe4c582ce3eb2d4f926))
+
+
+### Features
+
+* update dependencies, add `eslint-plugin-perfectionist` ([9dd3350](https://github.com/samialdury/config/commit/9dd3350e6f1b00642b09280cd591d7278dd5a5d4))
+
 ## [5.6.1](https://github.com/samialdury/config/compare/v5.6.0...v5.6.1) (2023-08-18)
 
 
