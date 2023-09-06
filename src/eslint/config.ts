@@ -57,14 +57,15 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 '**/vitest.config.*',
                 '**/tsup.config.*',
                 '**/release.config.*',
-                ...(browser || nextJs ? ['**/tailwind.config.*'] : []),
+                ...(browser || nextJs
+                    ? ['**/tailwind.config.*', '**/postcss.config.*']
+                    : []),
                 ...(nextJs
                     ? [
                           '**/.next/**',
                           '**/out/**',
                           '**/next-env.d.ts',
                           '**/next.config.*',
-                          '**/postcss.config.*',
                       ]
                     : []),
                 ...ignores,
