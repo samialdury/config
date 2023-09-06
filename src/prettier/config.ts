@@ -5,12 +5,7 @@ import type { Config } from 'prettier'
 import type { PrettierConfigParams } from './types.js'
 
 export function config(params?: PrettierConfigParams): Config {
-    const {
-        tailwind = false,
-        astro = false,
-        plugins = [],
-        overrides = [],
-    } = params ?? {}
+    const { tailwind = false, plugins = [], overrides = [] } = params ?? {}
 
     return {
         printWidth: 80,
@@ -24,21 +19,8 @@ export function config(params?: PrettierConfigParams): Config {
             ...(tailwind
                 ? [require.resolve('prettier-plugin-tailwindcss')]
                 : []),
-            ...(astro ? [require.resolve('prettier-plugin-astro')] : []),
             ...plugins,
         ],
-        overrides: [
-            ...(astro
-                ? [
-                      {
-                          files: '*.astro',
-                          options: {
-                              parser: 'astro',
-                          },
-                      },
-                  ]
-                : []),
-            ...overrides,
-        ],
+        overrides,
     }
 }

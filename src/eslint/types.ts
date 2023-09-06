@@ -21,11 +21,6 @@ export interface ESLintConfigParams {
      * @default false
      */
     nextJs?: boolean
-    /**
-     * Whether to enable [Astro](https://astro.build/) support
-     * @default false
-     */
-    astro?: boolean
     fp?: boolean
     /**
      * Additional `ignores` to be added to the config

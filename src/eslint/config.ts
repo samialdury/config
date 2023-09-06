@@ -22,7 +22,6 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
         node = false,
         browser = false,
         nextJs = false,
-        astro = false,
         fp = false,
         ignores = [],
         plugins = [],
@@ -55,7 +54,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 '**/vitest.config.*',
                 '**/tsup.config.*',
                 '**/release.config.*',
-                ...(browser || nextJs || astro ? ['**/tailwind.config.*'] : []),
+                ...(browser || nextJs ? ['**/tailwind.config.*'] : []),
                 ...(nextJs
                     ? [
                           '**/.next/**',
@@ -65,14 +64,13 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                           '**/postcss.config.*',
                       ]
                     : []),
-                ...(astro ? ['**/.astro/**'] : []),
                 ...ignores,
             ],
             // @ts-expect-error: it's fine
             languageOptions: {
                 globals: {
-                    ...((node || nextJs || astro) && globals.node),
-                    ...((browser || nextJs || astro) && globals.browser),
+                    ...((node || nextJs) && globals.node),
+                    ...((browser || nextJs) && globals.browser),
                 },
                 sourceType: 'module',
                 ecmaVersion: 'latest',

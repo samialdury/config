@@ -7,11 +7,6 @@ export interface PrettierConfigParams {
      */
     tailwind?: boolean
     /**
-     * Whether to enable [Astro](https://astro.build/) support
-     * @default false
-     */
-    astro?: boolean
-    /**
      * Additional `plugins` to be added to the config
      * @default []
      */
