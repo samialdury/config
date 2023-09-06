@@ -1,3 +1,10 @@
+## [5.7.1](https://github.com/samialdury/config/compare/v5.7.0...v5.7.1) (2023-09-06)
+
+
+### Bug Fixes
+
+* **eslint:** move postcss config to browser specific ([2e4293f](https://github.com/samialdury/config/commit/2e4293f3552d16034e5cdf1ef0c3d5e8d9099574))
+
 # [5.7.0](https://github.com/samialdury/config/compare/v5.6.1...v5.7.0) (2023-09-06)
 
 
