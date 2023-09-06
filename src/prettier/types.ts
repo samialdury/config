@@ -2,18 +2,18 @@ import type { Config } from 'prettier'
 
 export interface PrettierConfigParams {
     /**
-     * Whether to enable [Tailwind CSS](https://tailwindcss.com/) support
-     * @default false
+     * Additional `overrides` to be added to the config
+     * @default []
      */
-    tailwind?: boolean
+    overrides?: Config['overrides']
     /**
      * Additional `plugins` to be added to the config
      * @default []
      */
     plugins?: Config['plugins']
     /**
-     * Additional `overrides` to be added to the config
-     * @default []
+     * Whether to enable [Tailwind CSS](https://tailwindcss.com/) support
+     * @default false
      */
-    overrides?: Config['overrides']
+    tailwind?: boolean
 }

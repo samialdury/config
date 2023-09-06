@@ -5,14 +5,10 @@ import type { Config } from 'prettier'
 import type { PrettierConfigParams } from './types.js'
 
 export function config(params?: PrettierConfigParams): Config {
-    const { tailwind = false, plugins = [], overrides = [] } = params ?? {}
+    const { overrides = [], plugins = [], tailwind = false } = params ?? {}
 
     return {
-        printWidth: 80,
-        tabWidth: 4,
-        useTabs: false,
-        semi: false,
-        singleQuote: true,
+        overrides,
         plugins: [
             require.resolve('prettier-plugin-sh'),
             require.resolve('prettier-plugin-packagejson'),
@@ -21,6 +17,10 @@ export function config(params?: PrettierConfigParams): Config {
                 : []),
             ...plugins,
         ],
-        overrides,
+        printWidth: 80,
+        semi: false,
+        singleQuote: true,
+        tabWidth: 4,
+        useTabs: false,
     }
 }

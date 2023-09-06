@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
+import type { Config } from 'lint-staged'
+
 import { relative } from 'node:path'
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import eslint from 'eslint/use-at-your-own-risk'
-import type { Config } from 'lint-staged'
 
 import type { LintStagedConfigParams } from './types.js'
 

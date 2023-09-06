@@ -5,10 +5,10 @@ import type { SemanticReleaseConfigParams } from './types.js'
 
 export function config(params?: SemanticReleaseConfigParams): Options {
     const {
-        branches = ['main'],
-        releaseRules = [],
         assets = ['package.json', 'CHANGELOG.md'],
+        branches = ['main'],
         message = 'chore(release): v${nextRelease.version}',
+        releaseRules = [],
     } = params ?? {}
 
     return {
@@ -19,7 +19,7 @@ export function config(params?: SemanticReleaseConfigParams): Options {
                 {
                     preset: 'angular',
                     releaseRules: [
-                        { scope: 'no-release', release: false },
+                        { release: false, scope: 'no-release' },
                         ...releaseRules,
                     ],
                 },

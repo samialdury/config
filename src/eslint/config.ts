@@ -1,13 +1,18 @@
+/* eslint-disable unicorn/prefer-node-protocol */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import type { Linter } from 'eslint'
+
 import js from '@eslint/js'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
-import type { Linter } from 'eslint'
 // @ts-expect-error: it's fine
 import configPrettier from 'eslint-config-prettier'
 // @ts-expect-error: it's fine
 import pluginImport from 'eslint-plugin-import'
+// @ts-expect-error: it's fine
+import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural'
 // @ts-expect-error: it's fine
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
@@ -16,14 +21,15 @@ import type { ESLintConfigParams } from './types.js'
 
 export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
     const {
-        typeScript = true,
-        node = false,
         browser = false,
-        nextJs = false,
         ignores = [],
+        nextJs = false,
+        node = false,
+        perfectionist = true,
         plugins = [],
         rules = {},
         settings = {},
+        typeScript = true,
     } = params ?? {}
 
     return [
@@ -65,12 +71,12 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
             ],
             // @ts-expect-error: it's fine
             languageOptions: {
+                ecmaVersion: 'latest',
                 globals: {
                     ...((node || nextJs) && globals.node),
                     ...((browser || nextJs) && globals.browser),
                 },
                 sourceType: 'module',
-                ecmaVersion: 'latest',
                 ...(typeScript && {
                     parser: tsParser,
                     parserOptions: {
@@ -78,13 +84,15 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                     },
                 }),
             },
-            // @ts-expect-error: it's fine
             plugins: {
                 import: pluginImport,
                 ...(typeScript && {
                     '@typescript-eslint': pluginTs,
                 }),
                 unicorn: pluginUnicorn,
+                ...(perfectionist && {
+                    ...perfectionistNatural.plugins,
+                }),
                 ...plugins,
             },
             rules: {
@@ -102,14 +110,8 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 }),
                 ...pluginUnicorn.configs.recommended.rules,
                 ...configPrettier.rules,
+                'func-style': ['error', 'declaration'],
                 'import/newline-after-import': 'error',
-                'import/order': [
-                    'error',
-                    {
-                        'newlines-between': 'always',
-                        alphabetize: { order: 'asc', caseInsensitive: true },
-                    },
-                ],
                 'import/no-extraneous-dependencies': [
                     'error',
                     {
@@ -118,45 +120,45 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                         peerDependencies: false,
                     },
                 ],
-                'object-shorthand': ['error', 'always'],
+                'import/order': 'off',
                 'no-console': 'error',
-                'func-style': ['error', 'declaration'],
+                'object-shorthand': ['error', 'always'],
                 ...(typeScript && {
-                    '@typescript-eslint/explicit-function-return-type': 'error',
-                    '@typescript-eslint/promise-function-async': 'error',
                     '@typescript-eslint/consistent-type-imports': 'error',
+                    '@typescript-eslint/explicit-function-return-type': 'error',
                     '@typescript-eslint/no-import-type-side-effects': 'error',
                     '@typescript-eslint/no-unused-vars': [
                         'warn',
                         { argsIgnorePattern: '^_' },
                     ],
+                    '@typescript-eslint/promise-function-async': 'error',
                 }),
-                'unicorn/filename-case': [
-                    'error',
-                    {
-                        case: 'kebabCase',
-                    },
-                ],
                 'unicorn/catch-error-name': [
                     'error',
                     {
                         name: 'err',
                     },
                 ],
+                'unicorn/filename-case': [
+                    'error',
+                    {
+                        case: 'kebabCase',
+                    },
+                ],
                 'unicorn/prevent-abbreviations': [
                     'error',
                     {
                         replacements: {
-                            err: false,
-                            fn: false,
-                            ref: false,
-                            props: false,
                             args: false,
-                            params: false,
-                            prod: false,
+                            config: false,
                             dev: false,
                             env: false,
-                            config: false,
+                            err: false,
+                            fn: false,
+                            params: false,
+                            prod: false,
+                            props: false,
+                            ref: false,
                         },
                     },
                 ],
@@ -167,6 +169,31 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                     }),
                 ...(nextJs && {
                     'func-style': 'off',
+                }),
+                ...(perfectionist && {
+                    ...perfectionistNatural.rules,
+                    'perfectionist/sort-imports': [
+                        'error',
+                        {
+                            'custom-groups': {
+                                type: {},
+                                value: {},
+                            },
+                            groups: [
+                                'type',
+                                'builtin',
+                                'external',
+                                'internal-type',
+                                'internal',
+                                ['parent-type', 'sibling-type', 'index-type'],
+                                ['parent', 'sibling', 'index'],
+                                'object',
+                                'unknown',
+                            ],
+                            'internal-pattern': ['~/**'],
+                            'newlines-between': 'always',
+                        },
+                    ],
                 }),
                 ...rules,
             },
@@ -186,8 +213,8 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                     }),
                 },
                 'import/resolver': {
-                    typescript: typeScript,
                     node,
+                    typescript: typeScript,
                 },
                 ...settings,
             },
