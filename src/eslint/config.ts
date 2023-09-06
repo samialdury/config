@@ -7,8 +7,6 @@ import type { Linter } from 'eslint'
 // @ts-expect-error: it's fine
 import configPrettier from 'eslint-config-prettier'
 // @ts-expect-error: it's fine
-import pluginFunctional from 'eslint-plugin-functional'
-// @ts-expect-error: it's fine
 import pluginImport from 'eslint-plugin-import'
 // @ts-expect-error: it's fine
 import pluginUnicorn from 'eslint-plugin-unicorn'
@@ -22,7 +20,6 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
         node = false,
         browser = false,
         nextJs = false,
-        fp = false,
         ignores = [],
         plugins = [],
         rules = {},
@@ -87,7 +84,6 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 ...(typeScript && {
                     '@typescript-eslint': pluginTs,
                 }),
-                ...(fp && { functional: pluginFunctional }),
                 unicorn: pluginUnicorn,
                 ...plugins,
             },
@@ -103,14 +99,6 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                     ...pluginTs.configs['strict-type-checked'].rules,
                     // @ts-expect-error: it's fine
                     ...pluginTs.configs['stylistic-type-checked'].rules,
-                }),
-                ...(fp && {
-                    ...pluginFunctional.configs[
-                        'external-typescript-recommended'
-                    ].rules,
-                    ...pluginFunctional.configs.recommended.rules,
-                    ...pluginFunctional.configs.strict.rules,
-                    ...pluginFunctional.configs.stylistic.rules,
                 }),
                 ...pluginUnicorn.configs.recommended.rules,
                 ...configPrettier.rules,
@@ -172,11 +160,6 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                         },
                     },
                 ],
-                ...(fp && {
-                    'functional/type-declaration-immutability': 'off',
-                    'functional/prefer-immutable-types': 'off',
-                    'functional/prefer-tacit': 'off',
-                }),
                 ...(typeScript &&
                     nextJs && {
                         '@typescript-eslint/explicit-function-return-type':
