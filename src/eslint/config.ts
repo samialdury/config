@@ -64,6 +64,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                     ? [
                           '**/.next/**',
                           '**/out/**',
+                          '**/.vercel/**',
                           '**/next-env.d.ts',
                           '**/next.config.*',
                       ]
