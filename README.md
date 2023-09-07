@@ -14,7 +14,7 @@ This repository contains common configuration files for often used tools.
 ## Installation
 
 ```sh
-pnpm i -D -E @samialdury/config prettier eslint husky lint-staged @commitlint/cli
+pnpm i -D -E @samialdury/config prettier eslint husky @commitlint/cli lint-staged semantic-release
 ```
 
 ## Usage
