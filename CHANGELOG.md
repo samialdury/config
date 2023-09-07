@@ -1,3 +1,10 @@
+# [5.8.0](https://github.com/samialdury/config/compare/v5.7.2...v5.8.0) (2023-09-07)
+
+
+### Features
+
+* **eslint:** disable new lines between imports ([06515c2](https://github.com/samialdury/config/commit/06515c2b25d02b573ea986551c8c9c40c0110a98))
+
 ## [5.7.2](https://github.com/samialdury/config/compare/v5.7.1...v5.7.2) (2023-09-07)
 
 
