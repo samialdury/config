@@ -1,3 +1,10 @@
+## [5.7.2](https://github.com/samialdury/config/compare/v5.7.1...v5.7.2) (2023-09-07)
+
+
+### Bug Fixes
+
+* **eslint:** ignore `.vercel` directory when using Next.js ([b1a4dc6](https://github.com/samialdury/config/commit/b1a4dc6b6458af51057f153f964dd5adeeded858))
+
 ## [5.7.1](https://github.com/samialdury/config/compare/v5.7.0...v5.7.1) (2023-09-06)
 
 
