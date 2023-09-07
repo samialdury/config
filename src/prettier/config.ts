@@ -1,7 +1,6 @@
 /* eslint-disable unicorn/prefer-module */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { Config } from 'prettier'
-
 import type { PrettierConfigParams } from './types.js'
 
 export function config(params?: PrettierConfigParams): Config {

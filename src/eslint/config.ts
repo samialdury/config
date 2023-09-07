@@ -3,7 +3,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { Linter } from 'eslint'
-
 import js from '@eslint/js'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
@@ -16,7 +15,6 @@ import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommende
 // @ts-expect-error: it's fine
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
-
 import type { ESLintConfigParams } from './types.js'
 
 export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
@@ -193,7 +191,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                                 'unknown',
                             ],
                             'internal-pattern': ['~/**'],
-                            'newlines-between': 'always',
+                            'newlines-between': 'never',
                         },
                     ],
                 }),

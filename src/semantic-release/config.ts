@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { Options } from 'semantic-release'
-
 import type { SemanticReleaseConfigParams } from './types.js'
 
 export function config(params?: SemanticReleaseConfigParams): Options {
