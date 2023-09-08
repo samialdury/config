@@ -7,11 +7,6 @@ export interface ESLintConfigParams {
      */
     browser?: boolean
     /**
-     * Additional `ignores` to be added to the config.
-     * @default []
-     */
-    ignores?: Linter.FlatConfig['ignores']
-    /**
      * Whether to enable [Next.js](https://nextjs.org/) support.
      * @default false
      */

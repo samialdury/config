@@ -20,7 +20,6 @@ import type { ESLintConfigParams } from './types.js'
 export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
     const {
         browser = false,
-        ignores = [],
         nextJs = false,
         node = false,
         perfectionist = true,
@@ -40,34 +39,6 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 ...(typeScript
                     ? ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.d.ts']
                     : []),
-            ],
-            ignores: [
-                '**/node_modules/**',
-                '**/.cache/**',
-                '**/build/**',
-                '**/dist/**',
-                '**/coverage/**',
-                '**/.husky/**',
-                '**/eslint.config.*',
-                '**/prettier.config.*',
-                '**/commitlint.config.*',
-                '**/lint-staged.config.*',
-                '**/vitest.config.*',
-                '**/tsup.config.*',
-                '**/release.config.*',
-                ...(browser || nextJs
-                    ? ['**/tailwind.config.*', '**/postcss.config.*']
-                    : []),
-                ...(nextJs
-                    ? [
-                          '**/.next/**',
-                          '**/out/**',
-                          '**/.vercel/**',
-                          '**/next-env.d.ts',
-                          '**/next.config.*',
-                      ]
-                    : []),
-                ...ignores,
             ],
             // @ts-expect-error: it's fine
             languageOptions: {
@@ -247,6 +218,35 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                     },
                 ],
             },
+        },
+        {
+            ignores: [
+                '**/node_modules/**',
+                '**/.cache/**',
+                '**/build/**',
+                '**/dist/**',
+                '**/coverage/**',
+                '**/.husky/**',
+                '**/*.config.*',
+            ],
+        },
+        browser || nextJs
+            ? {
+                  ignores: ['**/public/**'],
+              }
+            : {},
+        nextJs
+            ? {
+                  ignores: [
+                      '**/.next/**',
+                      '**/out/**',
+                      '**/.vercel/**',
+                      '**/next-env.d.ts',
+                  ],
+              }
+            : {},
+        {
+            ignores: ['!**/src/**/*config.*'],
         },
     ]
 }
