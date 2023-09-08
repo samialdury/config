@@ -1,3 +1,10 @@
+# [5.9.0](https://github.com/samialdury/config/compare/v5.8.0...v5.9.0) (2023-09-08)
+
+
+### Features
+
+* **semantic-release:** patch release for `refactor` and `style` ([5c2b65b](https://github.com/samialdury/config/commit/5c2b65bfba758a7897b9ec3b34cc7a7e6e2ead45))
+
 # [5.8.0](https://github.com/samialdury/config/compare/v5.7.2...v5.8.0) (2023-09-07)
 
 
