@@ -1,3 +1,15 @@
+# [5.10.0](https://github.com/samialdury/config/compare/v5.9.0...v5.10.0) (2023-09-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-perfectionist to v2 ([#63](https://github.com/samialdury/config/issues/63)) ([402f6f6](https://github.com/samialdury/config/commit/402f6f6df4bfa1bf79d8db342475025ac93161e2))
+
+
+### Features
+
+* **ci:** upgrade to Node 20 ([250dcd3](https://github.com/samialdury/config/commit/250dcd3da2b194de013bd4ba354a876790ebee23))
+
 # [5.9.0](https://github.com/samialdury/config/compare/v5.8.0...v5.9.0) (2023-09-08)
 
 
