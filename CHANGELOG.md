@@ -1,3 +1,10 @@
+# [5.11.0](https://github.com/samialdury/config/compare/v5.10.0...v5.11.0) (2023-09-14)
+
+
+### Features
+
+* update description ([e77b136](https://github.com/samialdury/config/commit/e77b1369f12d2184eaaf235bba7f8f9165b6460e))
+
 # [5.10.0](https://github.com/samialdury/config/compare/v5.9.0...v5.10.0) (2023-09-11)
 
 
