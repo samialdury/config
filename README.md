@@ -1,7 +1,8 @@
-# Config
+# `@samialdury/config`
 
-[![NPM version](https://img.shields.io/npm/v/@samialdury/config)](https://www.npmjs.com/package/@samialdury/config)
-[![CI status](https://github.com/samialdury/config/actions/workflows/ci.yaml/badge.svg)](https://github.com/samialdury/config/actions/workflows/ci.yaml)
+[![CI status](https://github.com/samialdury/config/actions/workflows/ci.yml/badge.svg)](https://github.com/samialdury/config/actions/workflows/ci.yml)
+[![license](https://img.shields.io/github/license/samialdury/config)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/%40samialdury/config)](https://www.npmjs.com/package/@samialdury/config)
 
 This repository contains common configuration files for often used tools.
 
@@ -57,7 +58,6 @@ module.exports = lintStaged.config(opts)
 const { semanticRelease } = require('@samialdury/config')
 
 module.exports = semanticRelease.config(opts)
-
 ```
 
 ## License
