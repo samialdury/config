@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/github/license/samialdury/config)](LICENSE)
 [![npm version](https://img.shields.io/npm/v/%40samialdury/config)](https://www.npmjs.com/package/@samialdury/config)
 
-This repository contains common configuration files for often used tools.
+Common configuration for often used tools.
 
 - [Prettier](src/prettier/config.ts)
 - [ESLint](src/eslint/config.ts)

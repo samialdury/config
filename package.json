@@ -1,7 +1,7 @@
 {
     "name": "@samialdury/config",
     "version": "5.10.0",
-    "description": "Configuration files for my projects",
+    "description": "Common configuration for often used tools",
     "homepage": "https://github.com/samialdury/config#readme",
     "bugs": {
         "url": "https://github.com/samialdury/config/issues"
