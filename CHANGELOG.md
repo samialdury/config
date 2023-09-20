@@ -1,3 +1,11 @@
+## [5.11.1](https://github.com/samialdury/config/compare/v5.11.0...v5.11.1) (2023-09-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eslint/js to v8.49.0 ([#65](https://github.com/samialdury/config/issues/65)) ([0e35745](https://github.com/samialdury/config/commit/0e3574563106037ab9808668158ccd4beedcff79))
+* **deps:** update linters (minor) ([#66](https://github.com/samialdury/config/issues/66)) ([ef0fc95](https://github.com/samialdury/config/commit/ef0fc957198e2982461030219e5fee15816da6b7))
+
 # [5.11.0](https://github.com/samialdury/config/compare/v5.10.0...v5.11.0) (2023-09-14)
 
 
