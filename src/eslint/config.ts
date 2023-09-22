@@ -121,11 +121,15 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                     {
                         replacements: {
                             args: false,
+                            auth: false,
                             config: false,
+                            ctx: false,
+                            db: false,
                             dev: false,
                             env: false,
                             err: false,
                             fn: false,
+                            init: false,
                             params: false,
                             prod: false,
                             props: false,
