@@ -1,3 +1,10 @@
+## [5.11.2](https://github.com/samialdury/config/compare/v5.11.1...v5.11.2) (2023-09-22)
+
+
+### Bug Fixes
+
+* update common abbreviations ([35dafb2](https://github.com/samialdury/config/commit/35dafb25d5b879ded723a0733c1f5b3f44a1a9ea))
+
 ## [5.11.1](https://github.com/samialdury/config/compare/v5.11.0...v5.11.1) (2023-09-20)
 
 
