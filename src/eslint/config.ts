@@ -126,6 +126,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                             ctx: false,
                             db: false,
                             dev: false,
+                            docs: false,
                             env: false,
                             err: false,
                             fn: false,
