@@ -30,7 +30,7 @@
     ],
     "dependencies": {
         "@commitlint/config-conventional": "17.7.0",
-        "@eslint/js": "8.50.0",
+        "@eslint/js": "8.51.0",
         "@semantic-release/changelog": "6.0.3",
         "@semantic-release/git": "10.0.1",
         "@typescript-eslint/eslint-plugin": "6.7.4",
