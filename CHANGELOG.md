@@ -1,3 +1,30 @@
+# [6.0.0](https://github.com/samialdury/config/compare/v5.11.3...v6.0.0) (2023-10-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eslint/js to v8.50.0 ([#77](https://github.com/samialdury/config/issues/77)) ([1db209b](https://github.com/samialdury/config/commit/1db209b1a78fb59a2390c96ec0e12173e158d679))
+* **deps:** update dependency @eslint/js to v8.51.0 ([#86](https://github.com/samialdury/config/issues/86)) ([20bd582](https://github.com/samialdury/config/commit/20bd582bd35ee344424ca5617146f2d27f445259))
+* **deps:** update dependency globals to v13.22.0 ([#71](https://github.com/samialdury/config/issues/71)) ([e0d0f7d](https://github.com/samialdury/config/commit/e0d0f7dd0225b8638620a7e024670df2932786bf))
+* **deps:** update dependency globals to v13.23.0 ([#82](https://github.com/samialdury/config/issues/82)) ([1a7ffc3](https://github.com/samialdury/config/commit/1a7ffc3941c5100b5bcc6fe312d5d3c5fa3a58d0))
+* **deps:** update dependency prettier-plugin-tailwindcss to v0.5.5 ([#79](https://github.com/samialdury/config/issues/79)) ([dea0102](https://github.com/samialdury/config/commit/dea0102a8c6d1d0489cdfcd185ec0054d88d9035))
+* **deps:** update linters to v6.7.2 (patch) ([#70](https://github.com/samialdury/config/issues/70)) ([905a7c7](https://github.com/samialdury/config/commit/905a7c73d1c38741601a91da9548ad18e505f952))
+* **deps:** update linters to v6.7.4 (patch) ([#80](https://github.com/samialdury/config/issues/80)) ([aa428cd](https://github.com/samialdury/config/commit/aa428cd7aed51fee55a5779a49ed6d5b8300e6f0))
+* update dependencies ([9f6a8ad](https://github.com/samialdury/config/commit/9f6a8ada72c5860cfb1e2f261a60aebd2ffe58f9))
+
+
+* feat!: new eslint config format & updated options ([6c8c19c](https://github.com/samialdury/config/commit/6c8c19c02fc52e17098b3de42daa69c954bbc2ea))
+
+
+### Features
+
+* update peer dependencies ([8a71fa1](https://github.com/samialdury/config/commit/8a71fa1311841c06fe077e110b844a6812d869b3))
+
+
+### BREAKING CHANGES
+
+* new eslint config format & updated options
+
 ## [5.11.3](https://github.com/samialdury/config/compare/v5.11.2...v5.11.3) (2023-09-23)
 
 
