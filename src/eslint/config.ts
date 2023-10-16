@@ -1,87 +1,98 @@
-/* eslint-disable unicorn/prefer-node-protocol */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { Linter } from 'eslint'
 import js from '@eslint/js'
+// @ts-expect-error
+import pluginNext from '@next/eslint-plugin-next'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
-// @ts-expect-error: it's fine
+// @ts-expect-error
 import configPrettier from 'eslint-config-prettier'
-// @ts-expect-error: it's fine
+// @ts-expect-error
 import pluginImport from 'eslint-plugin-import'
-// @ts-expect-error: it's fine
+// @ts-expect-error
 import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural'
-// @ts-expect-error: it's fine
+// @ts-expect-error
+import pluginReact from 'eslint-plugin-react'
+// @ts-expect-error
+import pluginReactHooks from 'eslint-plugin-react-hooks'
+// @ts-expect-error
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
 import type { ESLintConfigParams } from './types.js'
 
+const jsxFiles = ['**/*.jsx']
+const jsxTsFiles = ['**/*.tsx']
+
+const jsTestFiles = [
+    '**/*.test.js',
+    '**/*.test.cjs',
+    '**/*.test.mjs',
+    '**/*.test.jsx',
+]
+const tsTestFiles = [
+    '**/*.test.ts',
+    '**/*.test.mts',
+    '**/*.test.d.ts',
+    '**/*.test.tsx',
+]
+
+const jsFiles = ['**/*.js', '**/*.cjs', '**/*.mjs', ...jsxFiles]
+const tsFiles = ['**/*.ts', '**/*.mts', '**/*.d.ts', ...jsxTsFiles]
+
+const testFiles = [...jsTestFiles, ...tsTestFiles]
+
+const allFiles = [...jsFiles, ...tsFiles, ...testFiles]
+
 export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
     const {
-        browser = false,
-        nextJs = false,
         node = false,
-        perfectionist = true,
-        plugins = [],
-        rules = {},
-        settings = {},
-        typeScript = true,
+        typeScript = false,
+        browser = false,
+        react = false,
+        nextJs = false,
     } = params ?? {}
 
     return [
         {
-            files: [
-                '**/*.js',
-                '**/*.jsx',
-                '**/*.cjs',
-                '**/*.mjs',
-                ...(typeScript
-                    ? ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.d.ts']
-                    : []),
-            ],
-            // @ts-expect-error: it's fine
+            files: allFiles,
+            linterOptions: {
+                reportUnusedDisableDirectives: true,
+            },
             languageOptions: {
                 ecmaVersion: 'latest',
+                sourceType: 'module',
                 globals: {
                     ...((node || nextJs) && globals.node),
-                    ...((browser || nextJs) && globals.browser),
+                    ...((browser || react || nextJs) && globals.browser),
                 },
-                sourceType: 'module',
-                ...(typeScript && {
-                    parser: tsParser,
-                    parserOptions: {
-                        project: './tsconfig.json',
-                    },
-                }),
+                parserOptions: {
+                    ecmaVersion: 'latest',
+                    sourceType: 'module',
+                },
             },
             plugins: {
                 import: pluginImport,
-                ...(typeScript && {
-                    '@typescript-eslint': pluginTs,
-                }),
                 unicorn: pluginUnicorn,
-                ...(perfectionist && {
-                    ...perfectionistNatural.plugins,
-                }),
-                ...plugins,
+                ...perfectionistNatural.plugins,
             },
             rules: {
                 ...js.configs.recommended.rules,
                 ...pluginImport.configs.recommended.rules,
-                ...(typeScript && {
-                    ...pluginImport.configs.typescript.rules,
-                    // @ts-expect-error: it's fine
-                    ...pluginTs.configs['eslint-recommended']?.overrides[0]
-                        ?.rules,
-                    // @ts-expect-error: it's fine
-                    ...pluginTs.configs['strict-type-checked'].rules,
-                    // @ts-expect-error: it's fine
-                    ...pluginTs.configs['stylistic-type-checked'].rules,
-                }),
                 ...pluginUnicorn.configs.recommended.rules,
+                ...perfectionistNatural.rules,
                 ...configPrettier.rules,
+
+                /**
+                 * core
+                 */
                 'func-style': ['error', 'declaration'],
+                'no-console': 'error',
+                'object-shorthand': ['error', 'always'],
+                /**
+                 * import
+                 */
                 'import/newline-after-import': 'error',
                 'import/no-extraneous-dependencies': [
                     'error',
@@ -92,18 +103,9 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                     },
                 ],
                 'import/order': 'off',
-                'no-console': 'error',
-                'object-shorthand': ['error', 'always'],
-                ...(typeScript && {
-                    '@typescript-eslint/consistent-type-imports': 'error',
-                    '@typescript-eslint/explicit-function-return-type': 'error',
-                    '@typescript-eslint/no-import-type-side-effects': 'error',
-                    '@typescript-eslint/no-unused-vars': [
-                        'warn',
-                        { argsIgnorePattern: '^_' },
-                    ],
-                    '@typescript-eslint/promise-function-async': 'error',
-                }),
+                /**
+                 * unicorn
+                 */
                 'unicorn/catch-error-name': [
                     'error',
                     {
@@ -138,82 +140,166 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                         },
                     },
                 ],
-                ...(typeScript &&
-                    nextJs && {
-                        '@typescript-eslint/explicit-function-return-type':
-                            'off',
-                    }),
-                ...(nextJs && {
-                    'func-style': 'off',
-                }),
-                ...(perfectionist && {
-                    ...perfectionistNatural.rules,
-                    'perfectionist/sort-imports': [
-                        'error',
-                        {
-                            'custom-groups': {
-                                type: {},
-                                value: {},
-                            },
-                            groups: [
-                                'type',
-                                'builtin',
-                                'external',
-                                'internal-type',
-                                'internal',
-                                ['parent-type', 'sibling-type', 'index-type'],
-                                ['parent', 'sibling', 'index'],
-                                'object',
-                                'unknown',
-                            ],
-                            'internal-pattern': ['~/**'],
-                            'newlines-between': 'never',
+                /**
+                 * perfectionist
+                 */
+                'perfectionist/sort-imports': [
+                    'error',
+                    {
+                        'custom-groups': {
+                            type: {},
+                            value: {},
                         },
-                    ],
-                }),
-                ...rules,
+                        groups: [
+                            'type',
+                            'builtin',
+                            'external',
+                            'internal-type',
+                            'internal',
+                            ['parent-type', 'sibling-type', 'index-type'],
+                            ['parent', 'sibling', 'index'],
+                            'object',
+                            'unknown',
+                        ],
+                        'internal-pattern': ['~/**'],
+                        'newlines-between': 'never',
+                    },
+                ],
+                'perfectionist/sort-objects': 'off',
+                'perfectionist/sort-object-types': 'off',
+                'perfectionist/sort-interfaces': 'off',
+                'perfectionist/sort-enums': 'off',
+                'perfectionist/sort-classes': 'off',
+                'perfectionist/sort-array-includes': 'off',
+                'perfectionist/sort-maps': 'off',
+                'perfectionist/sort-jsx-props': 'off',
+                'perfectionist/sort-astro-attributes': 'off',
+                'perfectionist/sort-vue-attributes': 'off',
+                'perfectionist/sort-svelte-attributes': 'off',
             },
             settings: {
                 'import/parsers': {
-                    ...(typeScript && {
-                        '@typescript-eslint/parser': [
-                            '.js',
-                            '.jsx',
-                            '.cjs',
-                            '.mjs',
-                            '.ts',
-                            '.tsx',
-                            '.mts',
-                            '.d.ts',
-                        ],
-                    }),
+                    espree: ['.js', '.cjs', '.mjs', '.jsx'],
                 },
                 'import/resolver': {
                     node,
-                    typescript: typeScript,
                 },
-                ...settings,
             },
         },
+
+        // @ts-expect-error
+        typeScript
+            ? {
+                  files: tsFiles,
+                  languageOptions: {
+                      ecmaVersion: 'latest',
+                      sourceType: 'module',
+                      parser: tsParser,
+                      parserOptions: {
+                          project: './tsconfig.json',
+                          ecmaVersion: 'latest',
+                          sourceType: 'module',
+                      },
+                  },
+                  plugins: {
+                      '@typescript-eslint': pluginTs,
+                  },
+                  rules: {
+                      ...pluginImport.configs.typescript.rules,
+                      // @ts-expect-error
+                      ...pluginTs.configs['eslint-recommended']?.overrides[0]
+                          ?.rules,
+                      // @ts-expect-error
+                      ...pluginTs.configs['strict-type-checked'].rules,
+                      // @ts-expect-error
+                      ...pluginTs.configs['stylistic-type-checked'].rules,
+
+                      /**
+                       * typescript
+                       */
+                      '@typescript-eslint/consistent-type-imports': 'error',
+                      '@typescript-eslint/explicit-function-return-type':
+                          'error',
+                      '@typescript-eslint/no-import-type-side-effects': 'error',
+                      '@typescript-eslint/no-unused-vars': [
+                          'warn',
+                          { argsIgnorePattern: '^_' },
+                      ],
+                      '@typescript-eslint/promise-function-async': 'error',
+                  },
+                  settings: {
+                      'import/parsers': {
+                          '@typescript-eslint/parser': [
+                              '.ts',
+                              '.mts',
+                              '.d.ts',
+                              '.tsx',
+                          ],
+                      },
+                      'import/resolver': {
+                          node,
+                          typescript: true,
+                      },
+                  },
+              }
+            : {},
+        react || nextJs
+            ? {
+                  files: [jsxFiles, jsxTsFiles],
+                  languageOptions: {
+                      globals: {
+                          ...globals.browser,
+                      },
+                      parserOptions: {
+                          ecmaFeatures: {
+                              jsx: true,
+                          },
+                      },
+                  },
+                  settings: {
+                      react: {
+                          version: 'detect',
+                      },
+                  },
+                  plugins: {
+                      react: pluginReact,
+                      'react-hooks': pluginReactHooks,
+                  },
+                  rules: {
+                      ...pluginReact.configs.recommended.rules,
+                      ...pluginReact.configs['jsx-runtime'].rules,
+                      ...pluginReactHooks.configs.recommended.rules,
+
+                      /**
+                       * core
+                       */
+                      'func-style': 'off',
+                      /**
+                       *
+                       * typescript
+                       */
+                      '@typescript-eslint/explicit-function-return-type': 'off',
+                  },
+              }
+            : {},
+        nextJs
+            ? {
+                  files: [jsxFiles, jsxTsFiles],
+                  plugins: {
+                      '@next/next': pluginNext,
+                  },
+                  rules: {
+                      ...pluginNext.configs.recommended.rules,
+                      ...pluginNext.configs['core-web-vitals'].rules,
+                  },
+              }
+            : {},
         {
-            files: [
-                '**/*.test.js',
-                '**/*.test.jsx',
-                '**/*.test.cjs',
-                '**/*.test.mjs',
-                ...(typeScript
-                    ? [
-                          '**/*.test.ts',
-                          '**/*.test.tsx',
-                          '**/*.test.mts',
-                          '**/*.test.d.ts',
-                      ]
-                    : []),
-            ],
-            plugins: {
-                import: pluginImport,
-            },
+            files: testFiles,
             rules: {
+                /**
+                 * import
+                 */
                 'import/no-extraneous-dependencies': [
                     'error',
                     {
@@ -235,7 +321,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 '**/*.config.*',
             ],
         },
-        browser || nextJs
+        browser || react || nextJs
             ? {
                   ignores: ['**/public/**'],
               }
@@ -250,8 +336,5 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   ],
               }
             : {},
-        {
-            ignores: ['!**/src/**/*config.*'],
-        },
     ]
 }

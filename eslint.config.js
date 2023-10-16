@@ -1,3 +1,3 @@
 import { eslint } from './dist/index.js'
 
-export default [...eslint.config({ typeScript: true, node: true })]
+export default [...eslint.config({ node: true, typeScript: true })]

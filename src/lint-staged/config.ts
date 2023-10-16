@@ -5,7 +5,6 @@ import { relative } from 'node:path'
 import eslint from 'eslint/use-at-your-own-risk'
 import type { LintStagedConfigParams } from './types.js'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-assignment
 const { FlatESLint: ESLint } = eslint as unknown as {
     // eslint-disable-next-line @typescript-eslint/consistent-type-imports
     FlatESLint: typeof import('eslint').ESLint
