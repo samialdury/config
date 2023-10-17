@@ -5,6 +5,7 @@ import type { Linter } from 'eslint'
 import js from '@eslint/js'
 // @ts-expect-error
 import pluginNext from '@next/eslint-plugin-next'
+import * as pluginTanStackQuery from '@tanstack/eslint-plugin-query'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 // @ts-expect-error
@@ -243,6 +244,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   },
               }
             : {},
+        //   @ts-expect-error
         react || nextJs
             ? {
                   files: [jsxFiles, jsxTsFiles],
@@ -264,11 +266,13 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   plugins: {
                       react: pluginReact,
                       'react-hooks': pluginReactHooks,
+                      '@tanstack/query': pluginTanStackQuery,
                   },
                   rules: {
                       ...pluginReact.configs.recommended.rules,
                       ...pluginReact.configs['jsx-runtime'].rules,
                       ...pluginReactHooks.configs.recommended.rules,
+                      ...pluginTanStackQuery.configs.recommended.rules,
 
                       /**
                        * core
