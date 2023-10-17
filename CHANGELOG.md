@@ -1,3 +1,15 @@
+# [6.1.0](https://github.com/samialdury/config/compare/v6.0.0...v6.1.0) (2023-10-17)
+
+
+### Bug Fixes
+
+* bundle configuration ([34811a1](https://github.com/samialdury/config/commit/34811a1f14b27937a880ae8dcdac9f5f1b87a08f))
+
+
+### Features
+
+* tanstack query plugin ([63b8711](https://github.com/samialdury/config/commit/63b87117bb772a2720ac48fbce31242162d6acfd))
+
 # [6.0.0](https://github.com/samialdury/config/compare/v5.11.3...v6.0.0) (2023-10-16)
 
 
