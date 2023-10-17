@@ -1,3 +1,10 @@
+## [6.1.1](https://github.com/samialdury/config/compare/v6.1.0...v6.1.1) (2023-10-17)
+
+
+### Bug Fixes
+
+* package.json keys order ([5713df8](https://github.com/samialdury/config/commit/5713df8449e73f2c78d1e1d2ade8a9e25acf2e89))
+
 # [6.1.0](https://github.com/samialdury/config/compare/v6.0.0...v6.1.0) (2023-10-17)
 
 
