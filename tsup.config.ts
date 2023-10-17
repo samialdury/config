@@ -1,5 +1,5 @@
+import { spawn } from 'node:child_process'
 import { defineConfig } from 'tsup'
-import { spawn } from 'child_process'
 
 export default defineConfig({
     clean: true,
