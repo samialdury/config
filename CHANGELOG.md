@@ -1,3 +1,10 @@
+## [6.1.2](https://github.com/samialdury/config/compare/v6.1.1...v6.1.2) (2023-10-21)
+
+
+### Bug Fixes
+
+* update dependencies ([324060d](https://github.com/samialdury/config/commit/324060de6aa7b18ed4d31ce807f660c3623f5fcc))
+
 ## [6.1.1](https://github.com/samialdury/config/compare/v6.1.0...v6.1.1) (2023-10-17)
 
 
