@@ -35,11 +35,11 @@
     ],
     "dependencies": {
         "@commitlint/config-conventional": "18.1.0",
-        "@eslint/js": "8.52.0",
+        "@eslint/js": "8.53.0",
         "@next/eslint-plugin-next": "14.0.2",
         "@semantic-release/changelog": "6.0.3",
         "@semantic-release/git": "10.0.1",
-        "@tanstack/eslint-plugin-query": "5.0.5",
+        "@tanstack/eslint-plugin-query": "5.6.0",
         "@typescript-eslint/eslint-plugin": "6.9.1",
         "@typescript-eslint/parser": "6.9.1",
         "eslint-config-prettier": "9.0.0",
