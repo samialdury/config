@@ -71,8 +71,8 @@ devDependencies:
     specifier: 18.1.0
     version: 18.1.0
   '@types/eslint':
-    specifier: 8.44.6
-    version: 8.44.6
+    specifier: 8.44.7
+    version: 8.44.7
   '@types/eslint__js':
     specifier: 8.42.3
     version: 8.42.3
@@ -863,8 +863,8 @@ packages:
       - typescript
     dev: false
 
-  /@types/eslint@8.44.6:
-    resolution: {integrity: sha512-P6bY56TVmX8y9J87jHNgQh43h6VVU+6H7oN7hgvivV81K2XY8qJZ5vqPy/HdUoVIelii2kChYVzQanlswPWVFw==}
+  /@types/eslint@8.44.7:
+    resolution: {integrity: sha512-f5ORu2hcBbKei97U73mf+l9t4zTGl74IqZ0GQk4oVea/VS8tQZYkUveSYojk+frraAVYId0V2WC9O4PTNru2FQ==}
     dependencies:
       '@types/estree': 1.0.3
       '@types/json-schema': 7.0.14
@@ -873,7 +873,7 @@ packages:
   /@types/eslint__js@8.42.3:
     resolution: {integrity: sha512-alfG737uhmPdnvkrLdZLcEKJ/B8s9Y4hrZ+YAdzUeoArBlSUERA2E87ROfOaS4jd/C45fzOoZzidLc1IPwLqOw==}
     dependencies:
-      '@types/eslint': 8.44.6
+      '@types/eslint': 8.44.7
     dev: true
 
   /@types/estree@1.0.3:
