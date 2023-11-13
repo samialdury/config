@@ -1,3 +1,23 @@
+# [6.2.0](https://github.com/samialdury/config/compare/v6.1.2...v6.2.0) (2023-11-13)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies (minor) ([#101](https://github.com/samialdury/config/issues/101)) ([ac92e33](https://github.com/samialdury/config/commit/ac92e3313d61badadf64f7acecfb96fdf7d1aa55))
+* **deps:** update all non-major dependencies (patch) ([#94](https://github.com/samialdury/config/issues/94)) ([44ead12](https://github.com/samialdury/config/commit/44ead12bd16b86f8592d83cc10ce2060b4b7e016))
+* **deps:** update all non-major dependencies (patch) ([#99](https://github.com/samialdury/config/issues/99)) ([5137fe5](https://github.com/samialdury/config/commit/5137fe5b79187a985168c2c366473bb3f6c868ee))
+* **deps:** update dependency @next/eslint-plugin-next to v14 ([#92](https://github.com/samialdury/config/issues/92)) ([c9e1152](https://github.com/samialdury/config/commit/c9e1152106d9fb4cabe7ea7785d66430a3435825))
+* **deps:** update dependency @tanstack/eslint-plugin-query to v5.0.5 ([#88](https://github.com/samialdury/config/issues/88)) ([1bfa21c](https://github.com/samialdury/config/commit/1bfa21ced5f4660e41426b15120a736a7d439a35))
+* **deps:** update dependency eslint-plugin-unicorn to v49 ([#96](https://github.com/samialdury/config/issues/96)) ([17fe82d](https://github.com/samialdury/config/commit/17fe82d9e2009636f6a6c1e75410219f4ae8ba9e))
+* **deps:** update linters (minor) ([#102](https://github.com/samialdury/config/issues/102)) ([0b4b983](https://github.com/samialdury/config/commit/0b4b983816dc48530ae64521d5467cac2bb834f9))
+* **deps:** update linters (minor) ([#90](https://github.com/samialdury/config/issues/90)) ([b0df82d](https://github.com/samialdury/config/commit/b0df82d4424f8da25ff9d8ce21a6a3ca1db22dff))
+* **deps:** update linters to v6.9.1 (patch) ([#95](https://github.com/samialdury/config/issues/95)) ([2a893ab](https://github.com/samialdury/config/commit/2a893ab1737e1ced718ce018193b6c954ae479ba))
+
+
+### Features
+
+* **prettier:** add `prettier-plugin-sql` & `prettier-plugin-autocorrect` ([765571d](https://github.com/samialdury/config/commit/765571d0ed080224739867e06761a10b0a200b0d))
+
 ## [6.1.2](https://github.com/samialdury/config/compare/v6.1.1...v6.1.2) (2023-10-21)
 
 
