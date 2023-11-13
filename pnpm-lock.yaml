@@ -74,17 +74,17 @@ devDependencies:
     specifier: 8.44.6
     version: 8.44.6
   '@types/eslint__js':
-    specifier: 8.42.2
-    version: 8.42.2
+    specifier: 8.42.3
+    version: 8.42.3
   '@types/lint-staged':
-    specifier: 13.2.1
-    version: 13.2.1
+    specifier: 13.2.2
+    version: 13.2.2
   '@types/node':
     specifier: 20.8.10
     version: 20.8.10
   '@types/semantic-release':
-    specifier: 20.0.4
-    version: 20.0.4
+    specifier: 20.0.5
+    version: 20.0.5
   eslint:
     specifier: 8.52.0
     version: 8.52.0
@@ -870,8 +870,8 @@ packages:
       '@types/json-schema': 7.0.14
     dev: true
 
-  /@types/eslint__js@8.42.2:
-    resolution: {integrity: sha512-uYTaRVqmzlZuutYfaLGD01CCBAvSbpWZNosJ+hsGm3uuuuaH113gZHNxTAGCGNvJDCOZiI94VSh5DTdrrmABFA==}
+  /@types/eslint__js@8.42.3:
+    resolution: {integrity: sha512-alfG737uhmPdnvkrLdZLcEKJ/B8s9Y4hrZ+YAdzUeoArBlSUERA2E87ROfOaS4jd/C45fzOoZzidLc1IPwLqOw==}
     dependencies:
       '@types/eslint': 8.44.6
     dev: true
@@ -887,8 +887,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
 
-  /@types/lint-staged@13.2.1:
-    resolution: {integrity: sha512-/pIzducFqyJAdXJb2pkQJNTIYBBph/XQdsBgn9oTuNjL1fMRw7AbutYzB0ODTxi8NYqJ9KUk9WyabZvpdNT/kQ==}
+  /@types/lint-staged@13.2.2:
+    resolution: {integrity: sha512-9c2ffPMJ1geob6yBmLuxzYye11HzKyA/I4dRZ8NfrPgY6SyzXt2SROD8vB3YjdPZJqqcu3WXsRvrY3PZbb720A==}
     dev: true
 
   /@types/minimist@1.2.4:
@@ -911,8 +911,8 @@ packages:
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
 
-  /@types/semantic-release@20.0.4:
-    resolution: {integrity: sha512-9zjlWBYjlRKKOtCu7mEcUTu5Ii5nRAujRe841R6ZfwzhLFCa+BGMdWMImzXZDeVj0ODpI37pO0FSKpMiR7sdww==}
+  /@types/semantic-release@20.0.5:
+    resolution: {integrity: sha512-KOnAenccRS53JzEXPe/lgK65JOAWn5jM7xJPqCt2F3FlN0qUR9BoZaXW9e0VLNlOPlu8a5/BZUoml2rXWcvNjg==}
     dependencies:
       '@types/node': 20.8.10
     dev: true
