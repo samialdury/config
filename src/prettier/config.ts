@@ -9,7 +9,9 @@ export function config(params?: PrettierConfigParams): Config {
         overrides,
         plugins: [
             require.resolve('prettier-plugin-sh'),
+            require.resolve('prettier-plugin-sql'),
             require.resolve('prettier-plugin-packagejson'),
+            require.resolve('prettier-plugin-autocorrect'),
             ...(tailwind
                 ? [require.resolve('prettier-plugin-tailwindcss')]
                 : []),
