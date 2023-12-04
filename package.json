@@ -62,7 +62,7 @@
         "@types/eslint": "8.44.8",
         "@types/eslint__js": "8.42.3",
         "@types/lint-staged": "13.2.2",
-        "@types/node": "20.9.5",
+        "@types/node": "20.10.1",
         "@types/semantic-release": "20.0.6",
         "eslint": "8.54.0",
         "husky": "8.0.3",
