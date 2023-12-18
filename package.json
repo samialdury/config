@@ -49,7 +49,7 @@
         "eslint-plugin-react": "7.33.2",
         "eslint-plugin-react-hooks": "4.6.0",
         "eslint-plugin-unicorn": "49.0.0",
-        "globals": "13.23.0",
+        "globals": "13.24.0",
         "prettier-plugin-autocorrect": "0.4.1",
         "prettier-plugin-packagejson": "2.4.7",
         "prettier-plugin-sh": "0.13.1",
