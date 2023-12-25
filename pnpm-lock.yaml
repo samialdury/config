@@ -9,8 +9,8 @@ dependencies:
     specifier: 18.4.3
     version: 18.4.3
   '@eslint/js':
-    specifier: 8.55.0
-    version: 8.55.0
+    specifier: 8.56.0
+    version: 8.56.0
   '@next/eslint-plugin-next':
     specifier: 14.0.4
     version: 14.0.4
@@ -63,8 +63,8 @@ dependencies:
     specifier: 0.13.1
     version: 0.13.1(prettier@3.1.1)
   prettier-plugin-sql:
-    specifier: 0.17.1
-    version: 0.17.1(prettier@3.1.1)
+    specifier: 0.18.0
+    version: 0.18.0(prettier@3.1.1)
   prettier-plugin-tailwindcss:
     specifier: 0.5.9
     version: 0.5.9(prettier@3.1.1)
@@ -543,6 +543,11 @@ packages:
   /@eslint/js@8.56.0:
     resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  /@eslint/js@8.56.0:
+    resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
@@ -3771,8 +3776,8 @@ packages:
       emojilib: 2.4.0
       skin-tone: 2.0.0
 
-  /node-sql-parser@4.11.0:
-    resolution: {integrity: sha512-ElheoPibjc7IVyRdsORgkzJi0DWm3f0LYSsm/eJIeUt3M/csDLTblLDR4zl5Qi7jmVjJ1KpEkPKSbgVGEzU5Xw==}
+  /node-sql-parser@4.17.0:
+    resolution: {integrity: sha512-3IhovpmUBpcETnoKK/KBdkz2mz53kVG5E1dnqz1QuYvtzdxYZW5xaGGEvW9u6Yyy2ivwR3eUZrn9inmEVef02w==}
     engines: {node: '>=8'}
     dependencies:
       big-integer: 1.6.51
@@ -4250,16 +4255,16 @@ packages:
       sh-syntax: 0.4.1
     dev: false
 
-  /prettier-plugin-sql@0.17.1(prettier@3.1.1):
-    resolution: {integrity: sha512-CR9UpTkUSC/f69AV597hnYcBo77iUhsBPkUER7BUa4YHRRtRUJGfL5LDoHAlUHWGTZNiJdHHELlzK6I3R9XuAw==}
+  /prettier-plugin-sql@0.18.0(prettier@3.1.1):
+    resolution: {integrity: sha512-E7WXooLNtWyv79sYYHtQbfvXZ5B/OOR0ySBsB2evfrfvD4wJos1OKLBvVLC/a7+7YpG30bSUTgc2DEwz8ctPmQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       prettier: ^3.0.3
     dependencies:
       jsox: 1.2.118
-      node-sql-parser: 4.11.0
+      node-sql-parser: 4.17.0
       prettier: 3.1.1
-      sql-formatter: 14.0.0
+      sql-formatter: 15.0.2
       tslib: 2.6.2
     dev: false
 
@@ -4838,8 +4843,8 @@ packages:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
     engines: {node: '>= 10.x'}
 
-  /sql-formatter@14.0.0:
-    resolution: {integrity: sha512-VcHYMRvZqg3RNjjxNB/puT9O1hR5QLXTvgTaBtxXcvmRQwSnH9M+oW2Ti+uFuVVU8HoNlOjU2uKHv8c0FQNsdQ==}
+  /sql-formatter@15.0.2:
+    resolution: {integrity: sha512-B8FTRc1dhb36lfuwSdiLhwrhkvT3PU/3es7YDPPQBOhbGHdXKlweAXTRS+QfCWk06ufAh118yFja6NcukBS4gg==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
