@@ -13,6 +13,8 @@ import configPrettier from 'eslint-config-prettier'
 // @ts-expect-error
 import pluginImport from 'eslint-plugin-import'
 // @ts-expect-error
+import pluginMarkdown from 'eslint-plugin-markdown'
+// @ts-expect-error
 import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural'
 // @ts-expect-error
 import pluginReact from 'eslint-plugin-react'
@@ -283,6 +285,13 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                        * typescript
                        */
                       '@typescript-eslint/explicit-function-return-type': 'off',
+                      /**
+                       * React
+                       */
+                      'react/jsx-no-leaked-render': [
+                          'warn',
+                          { validStrategies: ['ternary'] },
+                      ],
                   },
               }
             : {},
@@ -312,6 +321,30 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                         peerDependencies: false,
                     },
                 ],
+            },
+        },
+        {
+            files: ['*.md'],
+            plugins: {
+                markdown: pluginMarkdown,
+            },
+            processor: 'markdown/markdown',
+        },
+        {
+            files: ['**/*.md/**'],
+            plugins: {
+                markdown: pluginMarkdown,
+            },
+            languageOptions: {
+                parserOptions:
+                    pluginMarkdown.configs.recommended.overrides[1]
+                        .parserOptions,
+            },
+            rules: {
+                ...pluginMarkdown.configs.recommended.overrides[1].rules,
+                'import/no-unresolved': 'off',
+                'unicorn/filename-case': 'off',
+                'unicorn/prefer-module': 'off',
             },
         },
         {
