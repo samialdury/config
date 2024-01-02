@@ -25,7 +25,7 @@ pnpm i -D -E @samialdury/config prettier eslint husky @commitlint/cli lint-stage
 
 const { prettier } = require('@samialdury/config')
 
-module.exports = prettier.config()
+module.exports = prettier.config(options)
 ```
 
 ```js
@@ -33,7 +33,7 @@ module.exports = prettier.config()
 
 import { eslint } from '@samialdury/config'
 
-export default [...eslint.config()]
+export default [...eslint.config(options)]
 ```
 
 ```js
@@ -41,7 +41,7 @@ export default [...eslint.config()]
 
 const { commitlint } = require('@samialdury/config')
 
-module.exports = commitlint.config()
+module.exports = commitlint.config(options)
 ```
 
 ```js
@@ -49,7 +49,7 @@ module.exports = commitlint.config()
 
 const { lintStaged } = require('@samialdury/config')
 
-module.exports = lintStaged.config()
+module.exports = lintStaged.config(options)
 ```
 
 ```js
@@ -57,7 +57,7 @@ module.exports = lintStaged.config()
 
 const { semanticRelease } = require('@samialdury/config')
 
-module.exports = semanticRelease.config()
+module.exports = semanticRelease.config(options)
 ```
 
 ## License
