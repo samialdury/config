@@ -1,0 +1,52 @@
+diff --git a/index.js b/index.js
+index 2b5ec34853d3fabb787bbd6ac3553c1127285831..89851bc7f8a3b2617ba65bde55fff1c881b106f1 100644
+--- a/index.js
++++ b/index.js
+@@ -12,7 +12,7 @@ const reactSettings = require("./settings/react");
+  * @see https://github.com/eslint/eslint/issues/3458
+  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
+  */
+-require("@rushstack/eslint-patch/modern-module-resolution");
++// require("@rushstack/eslint-patch/modern-module-resolution");
+ 
+ const OFF = 0;
+ // const WARN = 1;
+diff --git a/internal.js b/internal.js
+index f4ce0902732367fe54e7335a6214d5e9283bebd0..5cbfcf27975daacb796ce0342b09e9278dbcd768 100644
+--- a/internal.js
++++ b/internal.js
+@@ -7,7 +7,7 @@
+  * @see https://github.com/eslint/eslint/issues/3458
+  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
+  */
+-require("@rushstack/eslint-patch/modern-module-resolution");
++// require("@rushstack/eslint-patch/modern-module-resolution");
+ 
+ const OFF = 0;
+ const WARN = 1;
+diff --git a/jest-testing-library.js b/jest-testing-library.js
+index db2e2970104c268c8d817a00867f640731a0e6a6..6482209b26272eb125bcd086f26474b708878d3a 100644
+--- a/jest-testing-library.js
++++ b/jest-testing-library.js
+@@ -6,7 +6,7 @@ const testingLibraryRules = require("./rules/testing-library");
+  * @see https://github.com/eslint/eslint/issues/3458
+  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
+  */
+-require("@rushstack/eslint-patch/modern-module-resolution");
++// require("@rushstack/eslint-patch/modern-module-resolution");
+ 
+ module.exports = {
+   plugins: ["jest", "jest-dom", "testing-library"],
+diff --git a/node.js b/node.js
+index e515800d8ed55fe5f033c934be11b3a6527b3119..011a7a54ff3951de366ab9c870817c8742610214 100644
+--- a/node.js
++++ b/node.js
+@@ -2,7 +2,7 @@
+  * @see https://github.com/eslint/eslint/issues/3458
+  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
+  */
+-require("@rushstack/eslint-patch/modern-module-resolution");
++// require("@rushstack/eslint-patch/modern-module-resolution");
+ 
+ module.exports = {
+   plugins: ["node"],

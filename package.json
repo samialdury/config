@@ -37,6 +37,7 @@
         "@commitlint/config-conventional": "18.4.3",
         "@eslint/js": "8.56.0",
         "@next/eslint-plugin-next": "14.0.4",
+        "@remix-run/eslint-config": "2.4.1",
         "@semantic-release/changelog": "6.0.3",
         "@semantic-release/git": "10.0.1",
         "@tanstack/eslint-plugin-query": "5.14.6",
@@ -50,6 +51,7 @@
         "eslint-plugin-perfectionist": "2.5.0",
         "eslint-plugin-react": "7.33.2",
         "eslint-plugin-react-hooks": "4.6.0",
+        "eslint-plugin-remix-react-routes": "1.0.5",
         "eslint-plugin-unicorn": "50.0.1",
         "globals": "13.24.0",
         "prettier-plugin-autocorrect": "0.4.1",
@@ -84,5 +86,10 @@
     "publishConfig": {
         "access": "public",
         "provenance": true
+    },
+    "pnpm": {
+        "patchedDependencies": {
+            "@remix-run/eslint-config@2.4.1": "patches/@remix-run__eslint-config@2.4.1.patch"
+        }
     }
 }

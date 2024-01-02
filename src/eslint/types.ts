@@ -24,4 +24,9 @@ export interface ESLintConfigParams {
      * @default false
      */
     nextJs?: boolean
+    /**
+     * Whether to enable [Remix](https://remix.run/) support.
+     * @default false
+     */
+    remix?: boolean
 }

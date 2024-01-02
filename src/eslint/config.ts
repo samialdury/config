@@ -5,6 +5,8 @@ import type { Linter } from 'eslint'
 import js from '@eslint/js'
 // @ts-expect-error
 import pluginNext from '@next/eslint-plugin-next'
+// @ts-expect-error
+import configRemix from '@remix-run/eslint-config'
 import * as pluginTanStackQuery from '@tanstack/eslint-plugin-query'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
@@ -22,6 +24,7 @@ import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommende
 import pluginReact from 'eslint-plugin-react'
 // @ts-expect-error
 import pluginReactHooks from 'eslint-plugin-react-hooks'
+import pluginRemixReactRoutes from 'eslint-plugin-remix-react-routes'
 // @ts-expect-error
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
@@ -57,7 +60,10 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
         browser = false,
         react = false,
         nextJs = false,
+        remix = false,
     } = params ?? {}
+
+    const reactFramework = nextJs || remix
 
     return [
         {
@@ -69,8 +75,9 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 ecmaVersion: 'latest',
                 sourceType: 'module',
                 globals: {
-                    ...((node || nextJs) && globals.node),
-                    ...((browser || react || nextJs) && globals.browser),
+                    ...((node || reactFramework) && globals.node),
+                    ...((browser || react || reactFramework) &&
+                        globals.browser),
                 },
                 parserOptions: {
                     ecmaVersion: 'latest',
@@ -249,7 +256,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
               }
             : {},
         //   @ts-expect-error
-        react || nextJs
+        react || reactFramework
             ? {
                   files: [jsxFiles, jsxTsFiles],
                   languageOptions: {
@@ -265,6 +272,9 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   settings: {
                       react: {
                           version: 'detect',
+                          ...(remix && {
+                              ...configRemix.settings.react,
+                          }),
                       },
                   },
                   plugins: {
@@ -308,6 +318,27 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   rules: {
                       ...pluginNext.configs.recommended.rules,
                       ...pluginNext.configs['core-web-vitals'].rules,
+                  },
+              }
+            : {},
+        remix
+            ? ({
+                  files: [jsxFiles, jsxTsFiles],
+                  plugins: {
+                      'remix-react-routes': pluginRemixReactRoutes,
+                  },
+                  settings: pluginRemixReactRoutes.configs.strict.settings,
+                  rules: {
+                      ...configRemix.rules,
+                      ...pluginRemixReactRoutes.configs.strict.rules,
+                  },
+              } as never)
+            : {},
+        remix
+            ? {
+                  files: configRemix.overrides[1].files,
+                  rules: {
+                      ...configRemix.overrides[1].rules,
                   },
               }
             : {},
@@ -362,7 +393,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 '**/*.config.*',
             ],
         },
-        browser || react || nextJs
+        browser || react || reactFramework
             ? {
                   ignores: ['**/public/**'],
               }
