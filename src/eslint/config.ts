@@ -13,6 +13,8 @@ import configPrettier from 'eslint-config-prettier'
 // @ts-expect-error
 import pluginImport from 'eslint-plugin-import'
 // @ts-expect-error
+import pluginReactA11y from 'eslint-plugin-jsx-a11y'
+// @ts-expect-error
 import pluginMarkdown from 'eslint-plugin-markdown'
 // @ts-expect-error
 import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural'
@@ -267,12 +269,14 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   },
                   plugins: {
                       react: pluginReact,
+                      'jsx-a11y': pluginReactA11y,
                       'react-hooks': pluginReactHooks,
                       '@tanstack/query': pluginTanStackQuery,
                   },
                   rules: {
                       ...pluginReact.configs.recommended.rules,
                       ...pluginReact.configs['jsx-runtime'].rules,
+                      ...pluginReactA11y.configs.recommended.rules,
                       ...pluginReactHooks.configs.recommended.rules,
                       ...pluginTanStackQuery.configs.recommended.rules,
 
