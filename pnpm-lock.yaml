@@ -29,8 +29,8 @@ dependencies:
     specifier: 10.0.1
     version: 10.0.1(semantic-release@22.0.12)
   '@tanstack/eslint-plugin-query':
-    specifier: 5.14.6
-    version: 5.14.6(eslint@8.56.0)(typescript@5.3.3)
+    specifier: 5.17.1
+    version: 5.17.1(eslint@8.56.0)(typescript@5.3.3)
   '@typescript-eslint/eslint-plugin':
     specifier: 6.16.0
     version: 6.16.0(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -2859,8 +2859,8 @@ packages:
       defer-to-connect: 2.0.1
     dev: false
 
-  /@tanstack/eslint-plugin-query@5.14.6(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-vpowwoGoB9JgZy8fljf53ZTW2yYLRQ3Tjx4WQFKxiKugQOctxaTjQk7wlYzuqA/gjzfPL9qHfKW5DTT9CmIpkA==}
+  /@tanstack/eslint-plugin-query@5.17.1(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-KWag75cTqs+/t3DSuoyM1Vh9Ns4FOnXZOkCn8nkxvOWnHRBL073c9Kg3YiYP3uo8ftcb1iiw3+a/5w1bf+8A7A==}
     peerDependencies:
       eslint: ^8.0.0
     dependencies:
