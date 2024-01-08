@@ -34,7 +34,7 @@
         "./src"
     ],
     "dependencies": {
-        "@commitlint/config-conventional": "18.4.3",
+        "@commitlint/config-conventional": "18.4.4",
         "@eslint/js": "8.56.0",
         "@next/eslint-plugin-next": "14.0.4",
         "@remix-run/eslint-config": "2.4.1",
@@ -61,8 +61,8 @@
         "prettier-plugin-tailwindcss": "0.5.10"
     },
     "devDependencies": {
-        "@commitlint/cli": "18.4.3",
-        "@commitlint/types": "18.4.3",
+        "@commitlint/cli": "18.4.4",
+        "@commitlint/types": "18.4.4",
         "@types/eslint": "8.56.0",
         "@types/eslint__js": "8.42.3",
         "@types/lint-staged": "13.3.0",
