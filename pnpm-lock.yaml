@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  '@remix-run/eslint-config@2.4.1':
+  '@remix-run/eslint-config@2.5.0':
     hash: wk5zswglektclowtqa2lrlnszu
-    path: patches/@remix-run__eslint-config@2.4.1.patch
+    path: patches/@remix-run__eslint-config@2.5.0.patch
 
 dependencies:
   '@commitlint/config-conventional':
@@ -20,8 +20,8 @@ dependencies:
     specifier: 14.0.4
     version: 14.0.4
   '@remix-run/eslint-config':
-    specifier: 2.4.1
-    version: 2.4.1(patch_hash=wk5zswglektclowtqa2lrlnszu)(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3)
+    specifier: 2.5.0
+    version: 2.5.0(patch_hash=wk5zswglektclowtqa2lrlnszu)(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3)
   '@semantic-release/changelog':
     specifier: 6.0.3
     version: 6.0.3(semantic-release@22.0.12)
@@ -2549,8 +2549,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@remix-run/eslint-config@2.4.1(patch_hash=wk5zswglektclowtqa2lrlnszu)(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-kzl520uCcIi7OlqItzy/OSb3YVBklxeov8d39fFPbcSAmwO99l0PXmstQcRCQphAkGC7uRNl3LSJ9LpD3Gj2dQ==}
+  /@remix-run/eslint-config@2.5.0(patch_hash=wk5zswglektclowtqa2lrlnszu)(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-vTWMWE/7zWLWiPQianWXKrhmyG1kTXfwx9dkBVlj9Xg4WIHe/IcuxrRMgNmjwRpTjNv/sVO9pu83oeYm3v9NRg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       eslint: ^8.0.0
