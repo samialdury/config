@@ -89,7 +89,7 @@
     },
     "pnpm": {
         "patchedDependencies": {
-            "@remix-run/eslint-config@2.4.1": "patches/@remix-run__eslint-config@2.4.1.patch"
+            "@remix-run/eslint-config@2.5.0": "patches/@remix-run__eslint-config@2.5.0.patch"
         }
     }
 }
