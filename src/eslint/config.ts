@@ -5,8 +5,6 @@ import type { Linter } from 'eslint'
 import js from '@eslint/js'
 // @ts-expect-error
 import pluginNext from '@next/eslint-plugin-next'
-// @ts-expect-error
-import configRemix from '@remix-run/eslint-config'
 import * as pluginTanStackQuery from '@tanstack/eslint-plugin-query'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
@@ -272,10 +270,14 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   settings: {
                       react: {
                           version: 'detect',
-                          ...(remix && {
-                              ...configRemix.settings.react,
-                          }),
                       },
+                      ...(remix && {
+                          formComponents: ['Form'],
+                          linkComponents: [
+                              { name: 'Link', linkAttribute: 'to' },
+                              { name: 'NavLink', linkAttribute: 'to' },
+                          ],
+                      }),
                   },
                   plugins: {
                       react: pluginReact,
@@ -329,18 +331,9 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   },
                   settings: pluginRemixReactRoutes.configs.strict.settings,
                   rules: {
-                      ...configRemix.rules,
                       ...pluginRemixReactRoutes.configs.strict.rules,
                   },
               } as never)
-            : {},
-        remix
-            ? {
-                  files: configRemix.overrides[1].files,
-                  rules: {
-                      ...configRemix.overrides[1].rules,
-                  },
-              }
             : {},
         {
             files: testFiles,
