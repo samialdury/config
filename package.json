@@ -37,7 +37,6 @@
         "@commitlint/config-conventional": "18.4.4",
         "@eslint/js": "8.56.0",
         "@next/eslint-plugin-next": "14.0.4",
-        "@remix-run/eslint-config": "2.5.0",
         "@semantic-release/changelog": "6.0.3",
         "@semantic-release/git": "10.0.1",
         "@tanstack/eslint-plugin-query": "5.17.7",
@@ -86,10 +85,5 @@
     "publishConfig": {
         "access": "public",
         "provenance": true
-    },
-    "pnpm": {
-        "patchedDependencies": {
-            "@remix-run/eslint-config@2.5.0": "patches/@remix-run__eslint-config@2.5.0.patch"
-        }
     }
 }
