@@ -1,3 +1,11 @@
+## [6.3.1](https://github.com/samialdury/config/compare/v6.3.0...v6.3.1) (2024-01-17)
+
+
+### Bug Fixes
+
+* **remix:** remove deprecated config ([96645a8](https://github.com/samialdury/config/commit/96645a8fdd54852c1cf9341605448d21da3712f8))
+* **remix:** remove patch ([8d5a753](https://github.com/samialdury/config/commit/8d5a753e76e46143b17a736e2878b8d67d5faa2d))
+
 # [6.3.0](https://github.com/samialdury/config/compare/v6.2.0...v6.3.0) (2024-01-17)
 
 
