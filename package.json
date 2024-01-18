@@ -61,6 +61,7 @@
         "prettier-plugin-toml": "2.0.1"
     },
     "devDependencies": {
+        "@arethetypeswrong/cli": "0.13.5",
         "@commitlint/cli": "18.4.4",
         "@commitlint/types": "18.4.4",
         "@types/eslint": "8.56.2",
@@ -72,6 +73,7 @@
         "husky": "8.0.3",
         "lint-staged": "15.2.0",
         "prettier": "3.1.1",
+        "publint": "0.2.7",
         "semantic-release": "22.0.12",
         "tsup": "8.0.1",
         "typescript": "5.3.3"
