@@ -1,3 +1,11 @@
+# [6.4.0](https://github.com/samialdury/config/compare/v6.3.1...v6.4.0) (2024-01-18)
+
+
+### Features
+
+* **ci:** add publint & attw ([cc1bdc0](https://github.com/samialdury/config/commit/cc1bdc0942d699132e567fa4d860754ed2aa8449))
+* **prettier:** add `prettier-plugin-toml` ([7494b40](https://github.com/samialdury/config/commit/7494b4011beb63ca4fe554c53a93d911badc7ba3))
+
 ## [6.3.1](https://github.com/samialdury/config/compare/v6.3.0...v6.3.1) (2024-01-17)
 
 
