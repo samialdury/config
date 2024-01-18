@@ -12,6 +12,7 @@ export function config(params?: PrettierConfigParams): Config {
             require.resolve('prettier-plugin-sql'),
             require.resolve('prettier-plugin-packagejson'),
             require.resolve('prettier-plugin-autocorrect'),
+            require.resolve('prettier-plugin-toml'),
             ...(tailwind
                 ? [require.resolve('prettier-plugin-tailwindcss')]
                 : []),
