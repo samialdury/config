@@ -1,3 +1,10 @@
+## [6.5.1](https://github.com/samialdury/config/compare/v6.5.0...v6.5.1) (2024-01-26)
+
+
+### Bug Fixes
+
+* **deps:** update linters (minor) ([#147](https://github.com/samialdury/config/issues/147)) ([8dd6ee9](https://github.com/samialdury/config/commit/8dd6ee9a985ec6b53756b61214c93e0615c9695c))
+
 # [6.5.0](https://github.com/samialdury/config/compare/v6.4.0...v6.5.0) (2024-01-26)
 
 
