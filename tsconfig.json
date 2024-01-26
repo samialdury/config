@@ -32,7 +32,7 @@
         // Other
         "noErrorTruncation": true,
         "rootDir": "src",
-        "outDir": "dist"
+        "outDir": "dist",
     },
-    "include": ["src"]
+    "include": ["src"],
 }
