@@ -59,6 +59,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
         react = false,
         nextJs = false,
         remix = false,
+        ignores = [],
     } = params ?? {}
 
     const reactFramework = nextJs || remix
@@ -377,6 +378,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
         },
         {
             ignores: [
+                '**/.DS_Store',
                 '**/node_modules/**',
                 '**/.cache/**',
                 '**/build/**',
@@ -384,6 +386,7 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                 '**/coverage/**',
                 '**/.husky/**',
                 '**/*.config.*',
+                '**/.wrangler/**',
             ],
         },
         browser || react || reactFramework
@@ -401,5 +404,6 @@ export function config(params?: ESLintConfigParams): Linter.FlatConfig[] {
                   ],
               }
             : {},
+        ignores.length > 0 ? { ignores } : {},
     ]
 }

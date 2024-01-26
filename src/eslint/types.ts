@@ -29,4 +29,8 @@ export interface ESLintConfigParams {
      * @default false
      */
     remix?: boolean
+    /**
+     * Additional ignore patterns.
+     */
+    ignores?: string[]
 }
