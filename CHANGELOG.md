@@ -1,3 +1,15 @@
+# [6.5.0](https://github.com/samialdury/config/compare/v6.4.0...v6.5.0) (2024-01-26)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies (minor) ([#146](https://github.com/samialdury/config/issues/146)) ([7d97678](https://github.com/samialdury/config/commit/7d976783d9009f1a70a5f26e240b4f40bed13bd3))
+
+
+### Features
+
+* **eslint:** allow specifying additional ignore patterns ([9ed5527](https://github.com/samialdury/config/commit/9ed55275798caf8b02378ebe9fed3e37af2bb5a4))
+
 # [6.4.0](https://github.com/samialdury/config/compare/v6.3.1...v6.4.0) (2024-01-18)
 
 
