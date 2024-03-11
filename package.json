@@ -76,7 +76,7 @@
         "publint": "0.2.7",
         "semantic-release": "22.0.12",
         "tsup": "8.0.1",
-        "typescript": "5.3.3"
+        "typescript": "5.4.2"
     },
     "peerDependencies": {
         "@commitlint/cli": "^18.0.0",
