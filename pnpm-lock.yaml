@@ -45,8 +45,8 @@ dependencies:
     specifier: 3.0.1
     version: 3.0.1(eslint@8.57.0)
   eslint-plugin-perfectionist:
-    specifier: 2.9.0
-    version: 2.9.0(eslint@8.57.0)(typescript@5.4.2)
+    specifier: 2.10.0
+    version: 2.10.0(eslint@8.57.0)(typescript@5.4.2)
   eslint-plugin-react:
     specifier: 7.34.1
     version: 7.34.1(eslint@8.57.0)
@@ -5007,8 +5007,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-perfectionist@2.9.0(eslint@8.57.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-ipFtDrqtF99qVVo+FE1fo6aHyLLp7hg6PNGfzY5KxQjcl0XCbyEFvjtR1NfkHDTN9rdFeEDxg59LLOv3VOAHAw==}
+  /eslint-plugin-perfectionist@2.10.0(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-P+tdrkHeMWBc55+DZsoDOAftV1WCsEoHaKm6JC7zajFus/syfT4vUPBFb3atGFSuyaVnGQGHlcKpP9X3Q0gH/w==}
     peerDependencies:
       astro-eslint-parser: ^0.16.0
       eslint: '>=8.0.0'
@@ -5025,7 +5025,7 @@ packages:
       vue-eslint-parser:
         optional: true
     dependencies:
-      '@typescript-eslint/utils': 6.21.0(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/utils': 7.7.0(eslint@8.57.0)(typescript@5.4.2)
       eslint: 8.57.0
       minimatch: 9.0.4
       natural-compare-lite: 1.4.0
