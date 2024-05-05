@@ -39,7 +39,7 @@
         "@next/eslint-plugin-next": "14.2.0",
         "@semantic-release/changelog": "6.0.3",
         "@semantic-release/git": "10.0.1",
-        "@tanstack/eslint-plugin-query": "5.28.6",
+        "@tanstack/eslint-plugin-query": "5.32.1",
         "@typescript-eslint/eslint-plugin": "7.7.1",
         "@typescript-eslint/parser": "7.7.1",
         "eslint-config-prettier": "9.1.0",
