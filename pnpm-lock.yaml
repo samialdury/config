@@ -21,8 +21,8 @@ dependencies:
     specifier: 10.0.1
     version: 10.0.1(semantic-release@22.0.12)
   '@tanstack/eslint-plugin-query':
-    specifier: 5.28.6
-    version: 5.28.6(eslint@8.57.0)(typescript@5.4.2)
+    specifier: 5.32.1
+    version: 5.32.1(eslint@8.57.0)(typescript@5.4.2)
   '@typescript-eslint/eslint-plugin':
     specifier: 7.7.1
     version: 7.7.1(@typescript-eslint/parser@7.7.1)(eslint@8.57.0)(typescript@5.4.2)
@@ -2767,8 +2767,8 @@ packages:
       defer-to-connect: 2.0.1
     dev: false
 
-  /@tanstack/eslint-plugin-query@5.28.6(eslint@8.57.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-kIvdN/EvbOrk4bbXOBm/Ik+uhQl5hawikkF5dLLmlvK3aZJzwRaRGpezYDM5Xw/6GCsATy+woh+Wvzj//BRvsg==}
+  /@tanstack/eslint-plugin-query@5.32.1(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-hlvKBV0JncpoA2HThfiD6OH8pdtn2N7WR74nWmDEuBEV1HMwXDo1QF/h/oKRPheEjzokVI13D3p11Lfw2kQr+g==}
     peerDependencies:
       eslint: ^8.0.0
     dependencies:
@@ -3136,7 +3136,7 @@ packages:
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
       '@types/json-schema': 7.0.15
-      '@types/semver': 7.5.6
+      '@types/semver': 7.5.8
       '@typescript-eslint/scope-manager': 6.21.0
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.4.2)
@@ -5025,7 +5025,7 @@ packages:
       vue-eslint-parser:
         optional: true
     dependencies:
-      '@typescript-eslint/utils': 7.7.0(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/utils': 7.7.1(eslint@8.57.0)(typescript@5.4.2)
       eslint: 8.57.0
       minimatch: 9.0.4
       natural-compare-lite: 1.4.0
