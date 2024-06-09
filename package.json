@@ -75,7 +75,7 @@
         "prettier": "3.2.5",
         "publint": "0.2.7",
         "semantic-release": "22.0.12",
-        "tsup": "8.0.1",
+        "tsup": "8.1.0",
         "typescript": "5.4.2"
     },
     "peerDependencies": {
