@@ -60,8 +60,8 @@ dependencies:
     specifier: 51.0.1
     version: 51.0.1(eslint@8.57.0)
   globals:
-    specifier: 13.24.0
-    version: 13.24.0
+    specifier: 15.6.0
+    version: 15.6.0
   prettier-plugin-autocorrect:
     specifier: 0.4.1
     version: 0.4.1(prettier@3.3.2)
@@ -5834,6 +5834,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
+
+  /globals@15.6.0:
+    resolution: {integrity: sha512-UzcJi88Hw//CurUIRa9Jxb0vgOCcuD/MNjwmXp633cyaRKkCWACkoqHCtfZv43b1kqXGg/fpOa8bwgacCeXsVg==}
+    engines: {node: '>=18'}
+    dev: false
 
   /globalthis@1.0.3:
     resolution: {integrity: sha512-sFdI5LyBiNTHjRd7cGPWapiHWMOXKyuBNX/cWJ3NfzrZQVa8GI/8cofCl74AOVqq9W5kNmguTIzJ/1s2gyI9wA==}
