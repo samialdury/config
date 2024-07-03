@@ -13,7 +13,7 @@ concurrency: release-${{ github.ref_name }}
 env:
     TERM: xterm-256color
     NODE_VERSION: 20
-    PNPM_VERSION: 8
+    PNPM_VERSION: 9
 
 jobs:
     release:
@@ -83,7 +83,7 @@ jobs:
               run: |
                   make build
 
-            - name: Release to NPM & GitHub
+            - name: Release to NPM, JSR & GitHub
               timeout-minutes: 10
               run: |
                   make release
