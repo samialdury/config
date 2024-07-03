@@ -1,3 +1,43 @@
+## [6.5.2](https://github.com/samialdury/config/compare/v6.5.1...v6.5.2) (2024-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies (minor) ([#195](https://github.com/samialdury/config/issues/195)) ([173e579](https://github.com/samialdury/config/commit/173e579b93eef3916f2bac97055652a58257d3ce))
+* **deps:** update dependency @tanstack/eslint-plugin-query to v5.18.0 ([#157](https://github.com/samialdury/config/issues/157)) ([c36640b](https://github.com/samialdury/config/commit/c36640b3b58312f3bde17e8685d87dd5683a5ddd))
+* **deps:** update dependency @tanstack/eslint-plugin-query to v5.20.1 ([#164](https://github.com/samialdury/config/issues/164)) ([a65ba2e](https://github.com/samialdury/config/commit/a65ba2e8d9d20b05a3426e888328c41ebf98d65a))
+* **deps:** update dependency @tanstack/eslint-plugin-query to v5.27.7 ([#181](https://github.com/samialdury/config/issues/181)) ([66ff019](https://github.com/samialdury/config/commit/66ff019a984740079cd5d126cf157f0144682a04))
+* **deps:** update dependency @tanstack/eslint-plugin-query to v5.28.6 ([#185](https://github.com/samialdury/config/issues/185)) ([10e8c15](https://github.com/samialdury/config/commit/10e8c15f7aecb9756e26995025773108a8c62502))
+* **deps:** update dependency @tanstack/eslint-plugin-query to v5.32.1 ([#204](https://github.com/samialdury/config/issues/204)) ([db981bd](https://github.com/samialdury/config/commit/db981bdc19790e12e7261821c2c89f7b892e5b82))
+* **deps:** update dependency @tanstack/eslint-plugin-query to v5.35.6 ([#209](https://github.com/samialdury/config/issues/209)) ([f4d97e9](https://github.com/samialdury/config/commit/f4d97e939efd1c5f4b50a462862a9a728fbdd5a0))
+* **deps:** update dependency @tanstack/eslint-plugin-query to v5.43.1 ([#222](https://github.com/samialdury/config/issues/222)) ([ece8d4a](https://github.com/samialdury/config/commit/ece8d4a583ab4a18fbef5c3f2a1d7b00136c1998))
+* **deps:** update dependency eslint-plugin-jsx-a11y to v6.9.0 ([#227](https://github.com/samialdury/config/issues/227)) ([7a502bf](https://github.com/samialdury/config/commit/7a502bf5e476fb8661b3fe0bb32fe7f36554b0fc))
+* **deps:** update dependency eslint-plugin-perfectionist to v2.10.0 ([#201](https://github.com/samialdury/config/issues/201)) ([7c7d022](https://github.com/samialdury/config/commit/7c7d022b28137247614e1396346fb6a79007d120))
+* **deps:** update dependency eslint-plugin-react to v7.34.2 ([#213](https://github.com/samialdury/config/issues/213)) ([abd5d69](https://github.com/samialdury/config/commit/abd5d699170e00639e62d51b0f81138dbc0d9c2c))
+* **deps:** update dependency eslint-plugin-react-hooks to v4.6.2 ([#203](https://github.com/samialdury/config/issues/203)) ([479f966](https://github.com/samialdury/config/commit/479f966dcc640369dd01916789d8710237677bb2))
+* **deps:** update dependency eslint-plugin-unicorn to v51 ([#162](https://github.com/samialdury/config/issues/162)) ([991fb5f](https://github.com/samialdury/config/commit/991fb5f569267b8d4cd9631bdbd779dcd96295e4))
+* **deps:** update dependency prettier-plugin-tailwindcss to v0.6.0 ([#214](https://github.com/samialdury/config/issues/214)) ([a7c6ac7](https://github.com/samialdury/config/commit/a7c6ac773db62e355ed32800dfcff95dd5da00d5))
+* **deps:** update linters (minor) ([#173](https://github.com/samialdury/config/issues/173)) ([c2b76be](https://github.com/samialdury/config/commit/c2b76befee24231476d5fafabcd8b561e9d27211))
+* **deps:** update linters (minor) ([#178](https://github.com/samialdury/config/issues/178)) ([0f2506c](https://github.com/samialdury/config/commit/0f2506cfbcbc16e25b7d08d7499730be9c4de84b))
+* **deps:** update linters (minor) ([#182](https://github.com/samialdury/config/issues/182)) ([b716405](https://github.com/samialdury/config/commit/b716405b6ee0ce7ada22985e74aefb4548b49cd4))
+* **deps:** update linters (minor) ([#191](https://github.com/samialdury/config/issues/191)) ([4e0d587](https://github.com/samialdury/config/commit/4e0d58742217a16d602a6069d808ac5c2e2ce52e))
+* **deps:** update linters (minor) ([#199](https://github.com/samialdury/config/issues/199)) ([3bca880](https://github.com/samialdury/config/commit/3bca880d2816a13a7f5623c77fdf0e718c88495c))
+* **deps:** update linters (minor) ([#219](https://github.com/samialdury/config/issues/219)) ([0969535](https://github.com/samialdury/config/commit/0969535c05af8f0bdf63d7df6a4d5ee5272bc90e))
+* **deps:** update linters (minor) ([#223](https://github.com/samialdury/config/issues/223)) ([a06129c](https://github.com/samialdury/config/commit/a06129ce8da978bcd23143fd34b239924a8967a0))
+* **deps:** update linters (patch) ([#200](https://github.com/samialdury/config/issues/200)) ([6e91bd3](https://github.com/samialdury/config/commit/6e91bd380cad42b2a5826fd1753297ad1853b653))
+* **deps:** update linters (patch) ([#225](https://github.com/samialdury/config/issues/225)) ([1477bde](https://github.com/samialdury/config/commit/1477bde957ab91cb415c4fdf85a9306b353a2e47))
+* **deps:** update linters to v6.20.0 (minor) ([#158](https://github.com/samialdury/config/issues/158)) ([45ae7a5](https://github.com/samialdury/config/commit/45ae7a5895aa880b3bb17d49d70bdd5ac6383fde))
+* **deps:** update linters to v6.21.0 (minor) ([#161](https://github.com/samialdury/config/issues/161)) ([5da3fc9](https://github.com/samialdury/config/commit/5da3fc9d431bd5510aacc78af63546d96ea33a82))
+* **deps:** update linters to v7 (major) ([#166](https://github.com/samialdury/config/issues/166)) ([63a8831](https://github.com/samialdury/config/commit/63a8831794912cecd9a62e92797d4ce84fd09f66))
+* **deps:** update linters to v7.1.1 (patch) ([#176](https://github.com/samialdury/config/issues/176)) ([d13a5f5](https://github.com/samialdury/config/commit/d13a5f539b7337cd4bb98e65f37f151e095c7f28))
+* **deps:** update linters to v7.10.0 (minor) ([#210](https://github.com/samialdury/config/issues/210)) ([d5c5d18](https://github.com/samialdury/config/commit/d5c5d18f77184e7c004b370966c52e331a8e2e8c))
+* **deps:** update linters to v7.11.0 (minor) ([#215](https://github.com/samialdury/config/issues/215)) ([2c66461](https://github.com/samialdury/config/commit/2c66461f6c3dd93a81e9c27cff7558705561c9f6))
+* **deps:** update linters to v7.3.1 (minor) ([#186](https://github.com/samialdury/config/issues/186)) ([e7e2abb](https://github.com/samialdury/config/commit/e7e2abb125539c98dcbf2f4e308d55e01d7e63e0))
+* **deps:** update linters to v7.4.0 (minor) ([#187](https://github.com/samialdury/config/issues/187)) ([eb3ba93](https://github.com/samialdury/config/commit/eb3ba93066809e68b2f9f8c4eb6692e56648b027))
+* **deps:** update linters to v7.6.0 (minor) ([#196](https://github.com/samialdury/config/issues/196)) ([d458fbe](https://github.com/samialdury/config/commit/d458fbe140c688495fe81133ce45cacc181bb149))
+* **deps:** update linters to v7.8.0 (minor) ([#205](https://github.com/samialdury/config/issues/205)) ([79c6499](https://github.com/samialdury/config/commit/79c64995d89796c511c8241231d584c47d3ccf04))
+* publish to JSR ([4092325](https://github.com/samialdury/config/commit/40923252f65b4107bb9ffe41234ef1730cb328f2))
+
 ## [6.5.1](https://github.com/samialdury/config/compare/v6.5.0...v6.5.1) (2024-01-26)
 
 
