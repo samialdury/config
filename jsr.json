@@ -1,6 +1,6 @@
 {
     "name": "@sami/config",
-    "version": "6.5.1",
+    "version": "6.5.2",
     "exports": "./src/index.ts",
     "publish": {
         "include": ["package.json", "src/**/*.ts", "README.md", "LICENSE"],
