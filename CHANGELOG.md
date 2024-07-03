@@ -1,3 +1,10 @@
+## [6.5.5](https://github.com/samialdury/config/compare/v6.5.4...v6.5.5) (2024-07-03)
+
+
+### Bug Fixes
+
+* jsr release ([2fadd79](https://github.com/samialdury/config/commit/2fadd79649d0802696005ffd77b3b40ad2e38c71))
+
 ## [6.5.4](https://github.com/samialdury/config/compare/v6.5.3...v6.5.4) (2024-07-03)
 
 
