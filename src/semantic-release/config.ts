@@ -28,6 +28,7 @@ export function config(params?: SemanticReleaseConfigParams): Options {
             '@semantic-release/release-notes-generator',
             '@semantic-release/changelog',
             '@semantic-release/npm',
+            '@sebbo2002/semantic-release-jsr',
             [
                 '@semantic-release/git',
                 {
@@ -36,7 +37,6 @@ export function config(params?: SemanticReleaseConfigParams): Options {
                 },
             ],
             '@semantic-release/github',
-            '@sebbo2002/semantic-release-jsr',
         ],
     }
 }
