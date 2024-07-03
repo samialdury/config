@@ -36,6 +36,7 @@ export function config(params?: SemanticReleaseConfigParams): Options {
                 },
             ],
             '@semantic-release/github',
+            '@sebbo2002/semantic-release-jsr',
         ],
     }
 }
