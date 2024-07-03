@@ -4,7 +4,7 @@ import type { SemanticReleaseConfigParams } from './types.js'
 
 export function config(params?: SemanticReleaseConfigParams): Options {
     const {
-        assets = ['package.json', 'CHANGELOG.md'],
+        assets = ['package.json', 'jsr.json', 'CHANGELOG.md'],
         branches = ['main'],
         message = 'chore(release): v${nextRelease.version}',
         releaseRules = [],
