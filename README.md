@@ -1,5 +1,8 @@
 # `@samialdury/config`
 
+> [!WARNING]
+> This package and repository are deprecated and no longer maintained.
+
 [![CI status](https://github.com/samialdury/config/actions/workflows/ci.yml/badge.svg)](https://github.com/samialdury/config/actions/workflows/ci.yml)
 [![license](https://img.shields.io/github/license/samialdury/config)](LICENSE)
 [![npm version](https://img.shields.io/npm/v/%40samialdury/config)](https://www.npmjs.com/package/@samialdury/config)
