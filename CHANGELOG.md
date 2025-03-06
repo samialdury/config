@@ -1,3 +1,10 @@
+# [6.6.0](https://github.com/samialdury/config/compare/v6.5.5...v6.6.0) (2025-03-06)
+
+
+### Features
+
+* deprecate package ([1d42167](https://github.com/samialdury/config/commit/1d4216707351f516479d3e0cada635d1d3ca6f80))
+
 ## [6.5.5](https://github.com/samialdury/config/compare/v6.5.4...v6.5.5) (2024-07-03)
 
 
